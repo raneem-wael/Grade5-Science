@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>أجسام الحيوانات | LearnLayer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8fcfd;--card:#fff;--ink:#1f3d52;--ink2:#5a7587;--line:#d3e5ec;--navy:#d9eff6;--teal:#17b8a6;--tint:#e5f6f3;--red:#e8584f;--blue:#3b9ad9;--sun:#ffc83d;--bone:#f7eedb;--boneline:#c9b88f;--shirt:#3e6fa8;--fur:#c9a27a;--skin:#f4d3b2;--pants:#3d4f66;--ok:#1a9a55;--grid:#e6f1f5;--h1:#d6f3ee;--h2:#fff1c6;--note:#fff0a0;--noteink:#4a3d00;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#081426;--card:#0f2742;--ink:#e6eef7;--ink2:#9db4c8;--line:#244764;--navy:#06121f;--teal:#2dd4bf;--tint:#12304a;--red:#ef6a5e;--blue:#6bb8dc;--bone:#e3d9c0;--boneline:#8a7c5a;--shirt:#2d527e;--fur:#9a7650;--skin:#d9aa80;--pants:#4a6a8f;--ok:#5fd18d;--grid:#0d2238;--h1:#0f2a3f;--h2:#143a66;--note:#6b5d12;--noteink:#fff6c9}}
+:root[data-theme="dark"]{--bg:#081426;--card:#0f2742;--ink:#e6eef7;--ink2:#9db4c8;--line:#244764;--navy:#06121f;--teal:#2dd4bf;--tint:#12304a;--red:#ef6a5e;--blue:#6bb8dc;--bone:#e3d9c0;--boneline:#8a7c5a;--shirt:#2d527e;--fur:#9a7650;--skin:#d9aa80;--pants:#4a6a8f;--ok:#5fd18d;--grid:#0d2238;--h1:#0f2a3f;--h2:#143a66;--note:#6b5d12;--noteink:#fff6c9}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background-color:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;color:var(--ink);font-family:Cairo,Tahoma,sans-serif;line-height:1.9;font-size:18px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+.hero{background:linear-gradient(135deg,var(--h1),var(--h2));padding:26px 0 30px;border-bottom:4px solid var(--teal)}
+h1{font-size:clamp(2rem,7vw,2.9rem);font-weight:800;line-height:1.3;margin:8px 0}
+h2{font-size:1.5rem;font-weight:800;margin:0 0 8px}
+p{margin:6px 0}.lead{color:var(--ink2);font-size:1.1rem}
+.nav a{display:inline-block;margin:8px 0 0 8px;padding:4px 16px;border-radius:999px;background:var(--teal);color:#042a26;font-weight:800;text-decoration:none}.nav a.o{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 0}
+.cmpt{margin-top:16px;font-weight:800;font-size:1.1rem}
+.flip{display:flex;perspective:900px;cursor:pointer;border-radius:16px;animation:wig 2.6s ease-in-out infinite}.flip.seen{animation:none}
+@keyframes wig{0%,70%,100%{transform:rotate(0)}76%{transform:rotate(-2.5deg)}82%{transform:rotate(2.5deg)}88%{transform:rotate(-1.5deg)}94%{transform:rotate(1deg)}}
+.fi{flex:1;display:grid;transition:transform .7s;transform-style:preserve-3d}.flip.on .fi{transform:rotateY(180deg)}
+.fc{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:2px;justify-content:center;line-height:1.7;font-size:.98rem;font-weight:600}
+.ff{min-height:170px;align-items:center;text-align:center}.ff b{font-size:1.5rem}.ff em{font-style:normal;background:var(--sun);color:#2b2100;border-radius:999px;padding:0 14px;font-weight:800;margin-top:8px}
+.fb2{transform:rotateY(180deg);background:var(--card);border:3px solid var(--c)}.fb2 b{font-size:1.1rem}
+.flip.a .ff{background:var(--bone);color:#3b3220;border:3px solid var(--boneline)}.flip.b .ff{background:var(--red);color:#fff}.flip.a .fb2{--c:var(--teal)}.flip.b .fb2{--c:var(--red)}
+.flip:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.tg{display:inline-block;background:var(--sun);color:#3a2a00;font-weight:800;border-radius:8px;padding:0 12px;font-size:.9rem}
+.tag{display:inline-block;background:var(--sun);color:#2b2100;font-weight:800;border-radius:8px;padding:0 10px;font-size:.95rem}
+.blk{border-inline-start:6px solid var(--c,var(--teal));padding:4px 18px 4px 0;margin:38px 0}
+.box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin:14px 0}
+.def{background:var(--tint);border-radius:12px;padding:8px 14px;margin:10px 0;border-inline-start:5px solid var(--teal);font-size:.98rem}
+.ill{background:var(--card);border:2px solid var(--blue);border-radius:14px;padding:8px 14px;margin:14px 0;font-size:.98rem}.ill .l{background:var(--blue);color:#fff;border-radius:8px;padding:0 10px;font-weight:800;margin-inline-end:8px}
+.msg{min-height:3.4em;margin-top:8px;font-weight:600}.why{color:var(--ink2);font-size:.95rem}
+button{font-family:inherit;font-size:1rem;font-weight:600;border:2px solid var(--ink);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 18px;cursor:pointer;margin:4px 3px}
+button:hover{background:var(--tint)}button.on{background:var(--ink);color:var(--bg)}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.tabs{margin:10px 0;text-align:center}.tabs button.on{background:var(--teal);border-color:var(--teal);color:#042a26}
+svg{width:100%;height:auto;display:block}
+.sk{fill:none;stroke:var(--sc);stroke-linecap:round}.se{fill:var(--sc)}.se2{fill:var(--shirt)}.se3{fill:var(--pants)}
+.bo{fill:none;stroke:var(--boneline);stroke-linecap:round;stroke-linejoin:round}.bf{fill:none;stroke:var(--bone);stroke-linecap:round;stroke-linejoin:round}
+.bn{fill:var(--bone);stroke:var(--boneline);stroke-width:2}.mz{fill:var(--red);stroke:#7d1d16;stroke-width:1.5;opacity:.82}
+.L0,.L1,.L2,.L3{transition:opacity .5s}.L1,.L2,.L3{opacity:0}
+svg[data-v=skel] .L0,svg[data-v=joint] .L0{opacity:.16}svg[data-v=muscle] .L0{opacity:.3}svg[data-v=all] .L0{opacity:.35}
+svg[data-v=skel] .L2,svg[data-v=joint] .L2,svg[data-v=all] .L2{opacity:1}svg[data-v=muscle] .L2{opacity:.8}
+svg[data-v=muscle] .L1{opacity:.95}svg[data-v=all] .L1{opacity:.5}svg[data-v=joint] .L3{opacity:1}
+svg[data-hl] .vb{fill:var(--sun)}
+.lb{font-family:Cairo,sans-serif;font-size:15px;font-weight:800;fill:var(--ink);paint-order:stroke;stroke:var(--card);stroke-width:4px;stroke-linejoin:round}
+.gnd{stroke:var(--ink2);stroke-width:3;stroke-dasharray:14 12;fill:none;opacity:.5}
+.ring{fill:none;stroke:var(--red);stroke-width:3;stroke-dasharray:5 4;animation:pl 1.2s infinite;transform-box:fill-box;transform-origin:center}
+@keyframes pl{50%{transform:scale(1.25);opacity:.5}}
+.run{animation:run .45s ease-in-out infinite alternate}@keyframes run{from{transform:translate(-8px,2px) rotate(-1.5deg)}to{transform:translate(8px,-5px) rotate(1.5deg)}}
+.hop{animation:hop 1.2s ease-in-out infinite}@keyframes hop{0%,100%{transform:translateY(0)}45%{transform:translateY(-48px) rotate(-6deg)}}
+.fly{animation:fly 1.6s ease-in-out infinite alternate}@keyframes fly{from{transform:translateY(-8px)}to{transform:translateY(8px)}}
+.wing{transform-origin:150px 92px;animation:flap .5s ease-in-out infinite alternate}@keyframes flap{from{transform:rotate(-20deg)}to{transform:rotate(48deg)}}
+.gnd.go{animation:gr .4s linear infinite}@keyframes gr{to{stroke-dashoffset:26}}
+.figs{display:flex;gap:10px;align-items:flex-end;justify-content:center}.fg{text-align:center}.fg.d{flex:1.55}.fg.h{flex:.6}.fg b{display:block}.fg svg{cursor:pointer;touch-action:manipulation}
+.hint{fill:none;stroke:var(--sun);stroke-width:4;stroke-dasharray:6 4;animation:pl 1s infinite;transform-box:fill-box;transform-origin:center}
+.cn{max-width:340px;margin:0 auto}
+input[type=range]{width:100%;accent-color:var(--teal)}
+.sc{display:flex;gap:10px;align-items:center;border-radius:12px;padding:4px 12px;margin:6px 0;background:var(--tint);opacity:.45;transition:opacity .3s;font-size:.98rem;line-height:1.6}.sc.on{opacity:1;outline:2px solid var(--teal)}
+.sc i{font-style:normal;background:var(--teal);color:#042a26;border-radius:8px;min-width:30px;text-align:center;font-weight:800}
+.note{background:var(--note);color:var(--noteink);border-radius:6px 6px 18px 6px;padding:14px 16px 18px;box-shadow:0 8px 18px rgba(0,0,0,.18);transform:rotate(-.8deg);font-size:.95rem;line-height:1.7}
+.note .nt{display:block;font-weight:800;font-size:1.1rem;border-bottom:2px dashed currentColor;padding-bottom:4px;margin-bottom:8px}
+.note .root{background:var(--noteink);color:var(--note);border-radius:12px;text-align:center;font-weight:800}
+.note ul{list-style:none;margin:8px 0 0;padding:0 14px 0 0;border-inline-end:3px solid currentColor}
+.note li{position:relative;margin:8px 0}.note li::before{content:"";position:absolute;inset-inline-end:-14px;top:.9em;width:12px;border-top:3px solid currentColor}
+.note li b{display:block}.note li span{font-size:.9rem}
+.wave{display:block;width:100%;height:60px;margin-top:50px}
+.band{background:var(--navy);padding:10px 0 70px;margin-top:-1px}.band h2{font-size:2rem}
+.score{display:inline-block;background:var(--card);border:2px solid var(--teal);border-radius:999px;padding:2px 18px;font-weight:800}
+.qb{background:var(--card);border-radius:14px;padding:10px 16px;margin:10px 0}.qt{font-weight:800}
+.opt{display:block;width:100%;text-align:right;border-radius:12px;margin:5px 0}
+.good{background:var(--ok)!important;border-color:var(--ok)!important;color:#fff!important}.bad{background:var(--red)!important;border-color:var(--red)!important;color:#fff!important}
+.res{margin-top:6px;font-size:.98rem}.res.ok{color:var(--ok);font-weight:700}.res.no{color:var(--red);font-weight:700}.res.md{background:var(--tint);border-radius:10px;padding:6px 12px}
+textarea{width:100%;font-family:inherit;font-size:1rem;border:2px solid var(--line);border-radius:10px;padding:6px 10px;background:var(--bg);color:var(--ink);margin-top:6px}
+.gh{margin:24px 0 8px;font-weight:800;font-size:1.2rem;border-inline-start:6px solid var(--teal);padding-inline-start:12px}
+@media(max-width:520px){.pair{grid-template-columns:1fr}body{font-size:17px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<span class="tg">معمل الحركة | الدرس الرابع</span>
+<h1>أجسام الحيوانات<br>بتتحرك زيّنا؟</h1>
+<p class="lead">هتقارن، تجرّب، وبعدين تحل التدريبات.</p>
+<div class="nav"><a href="#learn">الشرح</a><a href="#practice" class="o">التدريبات</a></div>
+<div class="cmpt">مقارنة سريعة: إيه المتشابه وإيه المختلف بين الإنسان والحيوان؟</div>
+<div class="pair">
+<div class="flip a" role="button" tabindex="0" aria-pressed="false"><div class="fi"><div class="fc ff"><b>أوجه التشابه</b><span>إيه اللي واحد بين الإنسان والحيوان؟</span><em>دوس عشان الكارت يتقلب ↻</em></div>
+<div class="fc fb2"><b>المتشابه: بنية الجسم (اللي جوه الجسم ) </b><span>الإنسان والكلب والأرنب جواهم نفس التركيب:</span><span>١) هيكل عظمي وعمود فقري</span><span>٢) مفاصل في الأطراف (الأيدي والأرجل)</span><span>٣) عضلات متصلة بالعظام وتغطيها</span><span>عشان كده بيتحركوا بنفس الطريقة: العضلات بتشد العظام.</span></div></div></div>
+<div class="flip b" role="button" tabindex="0" aria-pressed="false"><div class="fi"><div class="fc ff"><b>أوجه الاختلاف</b><span>إيه اللي مختلف؟</span><em>دوس عشان الكارت يتقلب ↻</em></div>
+<div class="fc fb2"><b>المختلف: شكل العظام والعضلات</b><span>أطوال العظام وطريقة اتصال العضلات بيها بتختلف شوية من حيوان لحيوان، حسب طريقة حركته:</span><span>الفهد: بيجري بسرعة</span><span>الحمامة: بتطير في السماء</span><span>الأرنب: بيقفز بسرعة</span></div></div></div>
+</div>
+<div class="msg" id="fm"></div>
+</div></header>
+
+<main class="wrap" id="learn">
+<section class="blk" style="--c:var(--sun)">
+<span class="tg">فكّر</span><h2>طريقة الحركة عند الحيوانات</h2>
+<p>طريقة الحركة عند الكثير من الحيوانات تشبه طريقة الحركة عند الإنسان؛ لأنها تمتلك نفس ...</p>
+<div id="q0"></div>
+</section>
+
+<section class="blk" style="--c:var(--teal)">
+<span class="tg">اعرف + تجربة ١</span><h2>أوجه التشابه بين عظام وعضلات الحيوانات</h2>
+<p>يتشابه الإنسان مع الكثير من الحيوانات في تركيب الجسم التي تساعد على الحركة. من بره الكلب والإنسان مختلفين خالص، بس <b>من جوه</b> فيهم نفس الحاجات. دوس على رقم عشان نعمل أشعة، وبعدين لاقي كل جزء بنفسك عند الكلب وعند الإنسان.</p>
+<div class="box"><div class="tabs" id="s1b"><button data-i="0"><span class="tag">١</span> الهيكل العظمي والعمود الفقري</button><button data-i="1"><span class="tag">٢</span> المفاصل الموجودة في الأرجل الأمامية والخلفية (الأطراف)</button><button data-i="2"><span class="tag">٣</span> عضلات متصلة بالعظام وتغطيها</button></div>
+<div class="figs"><div class="fg d"><svg id="dg" viewBox="60 40 310 205" data-v="sil" role="img" aria-label="كلب"></svg><b>الكلب</b></div><div class="fg h"><svg id="hm" viewBox="30 8 140 245" data-v="sil" role="img" aria-label="إنسان"></svg><b>الإنسان</b></div></div>
+<div class="def" id="s1x">الأول: دوس على رقم ١ وشوف العظام اللي جوه الجسمين.</div>
+<div class="msg" id="s1m"></div></div>
+</section>
+
+<section class="blk" style="--c:var(--red)">
+<span class="tg">اعرف + تجربة ٢</span><h2> آلية الحركة (الطريقة)</h2>
+<p>تتحرك كثير من الحيوانات، مثل: الكلاب والقطط والأرانب، بنفس الطريقة التي يتحرك بها الإنسان، حيث <b>تنقبض العضلات فتسحب العظام عند المفاصل</b>، فتحدث الحركة.</p>
+<p>الرسمة دي لرجل حيوان: عظمتين بيتقابلوا عند مفصل، وعضلة حمرا متصلة بالعظمتين. اسحب السلايدر أو دوس "شغّل" وراقب العضلة:</p>
+<div class="box"><div id="limb" class="cn"></div>
+<input type="range" id="ls" min="0" max="100" value="0" aria-label="انقباض العضلة">
+<div style="text-align:center"><button id="lp">شغّل الحركة</button><button id="lr">رجّع</button></div>
+<div class="sc" id="c1"><i>١</i><span>عندما تنقبض عضلات الجسم.<br><small class="why">بالبساطة: العضلة بتشدّ على نفسها وتبقى أقصر وأتخن.</small></span></div>
+<div class="sc" id="c2"><i>٢</i><span>تسحب العظام المتصلة بها فتتحرك أجزاء الجسم.<br><small class="why">بالبساطة: وهي بتتشدّ، بتسحب معاها العظمة اللي متصلة بيها.</small></span></div>
+<div class="sc" id="c3"><i>٣</i><span>تساعد المفاصل على تحريك العظام بسهولة، مثل: مفاصل الأرجل الأمامية والخلفية.<br><small class="why">بالبساطة: المفصل زي مفصلة الباب، بيخلّي العظمة تتحرك بسهولة.</small></span></div></div>
+<div class="ill"><span class="l">علل</span>تتحرك كثير من الحيوانات مثل الكلاب والقطط والأرانب بطريقة تشبه حركة الإنسان.<br>– لأنها تمتلك داخل أجسامها هيكلًا عظميًا وعمودًا فقريًا ومفاصل تساعدها على الحركة.</div>
+</section>
+
+<section class="blk" style="--c:var(--blue)">
+<span class="tg">اعرف + تجربة ٣</span><h2>الاختلاف في الحركة</h2>
+<p>تختلف أطوال العظام وطريقة اتصال العضلات بها قليلًا حسب طريقة حركة الحيوان، مثل: الجري بسرعة، والطيران في السماء، والقفز بسرعة. اختار حيوان وبعدين بدّل بين الجسم والهيكل والعضلات:</p>
+<div class="box"><div class="tabs" id="at"><button data-k="run" class="on">الجري بسرعة</button><button data-k="fly">الطيران في السماء</button><button data-k="hop">القفز بسرعة</button></div>
+<div id="an"></div><div class="tabs" id="vt"><button data-v="sil" class="on">الجسم</button><button data-v="skel">الهيكل</button><button data-v="muscle">العضلات</button></div><div class="msg" id="am"></div></div>
+<div class="ill"><span class="l">علل</span>تختلف أطوال العظام وطريقة اتصال العضلات بها من حيوان لآخر.<br>– لاختلاف طريقة الحركة في الحيوان، مثل: الجري بسرعة أو الطيران في السماء.</div>
+</section>
+
+<section class="blk" style="--c:var(--sun)">
+<span class="tg">اعرف + تجربة ٤</span><h2>مقارنة بين بنية عظام الإنسان وبنية عظام الحيوانات</h2><p>بص على الدواير الحمرا (المفاصل) وقارن: إزاي شكل العظام وأطوالها اتغيّر من الإنسان للحيوان؟</p>
+<div class="box"><div class="tabs" id="ct"><button data-k="f" class="on">الطرف الأمامي في الإنسان والكلب</button><button data-k="h">الطرف الخلفي في الإنسان والأرنب</button></div>
+<div id="cm"></div>
+<div id="hs" hidden><input type="range" id="hr" min="0" max="100" value="0" aria-label="فرد الرجل"><p class="why" style="text-align:center">اسحب السلايدر عشان تفرد الرجل وتشوف الجسم بيعلى إزاي.</p></div>
+<div class="def" id="cmt"></div></div>
+<div class="ill"><span class="l">علل</span>يمتلك الأرنب عظامًا طويلة في الأطراف الخلفية.<br>– ليستطيع القفز بسهولة.</div>
+</section>
+
+<section class="blk" style="--c:var(--red)">
+<span class="tg">الملخص</span><h2>خريطة الدرس</h2>
+<div class="note"><b class="nt">الملخص</b><div class="root">أجسام الحيوانات</div>
+<ul>
+<li><b>أوجه التشابه مع الإنسان</b><span>هيكل عظمي وعمود فقري ← مفاصل في الأطراف ← عضلات متصلة بالعظام وتغطيها</span></li>
+<li><b>طريقة الحركة</b><span>العضلات تنقبض ← تسحب العظام ← المفاصل تساعد على الحركة بسهولة</span></li>
+<li><b>الاختلاف في الحركة</b><span>أطوال العظام واتصال العضلات تختلف حسب الحركة: الجري (الفهد)، الطيران (الحمامة)، القفز (الأرنب)</span></li>
+<li><b>المقارنة</b><span>كوع الكلب أعلى من الأرض ليناسب وقوفه على أربع ← عظام الأرنب الخلفية الطويلة تساعده على القفز</span></li>
+</ul></div>
+</section>
+</main>
+
+<svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C150 0 300 60 450 30 S750 0 900 30 S1100 55 1200 25 V60 H0Z" fill="var(--navy)"/></svg>
+<section class="band" id="practice"><div class="wrap">
+<h2>وقت التدريبات</h2>
+<p class="lead">جاوب بنفسك الأول، وبعدين اضغط على الإجابة.</p>
+<div class="score" id="sc"></div>
+<div class="tabs"><button id="t1" class="on">تدريب ١</button><button id="t2">تدريب ٢</button><button id="t3">تحدي الرسمة</button></div>
+<div id="s1"></div><div id="s2" hidden></div>
+<div id="s3" hidden><div class="gh">اختار الاسم، وبعدين دوس على الدايرة في مكانه على الرسمة</div>
+<div class="qb"><div id="ch"></div><div id="chips" style="text-align:center"></div><div class="res" id="lr2"></div></div></div>
+</div></section>
+
+<script>
+var $=function(s){return document.querySelector(s)},$$=function(s){return document.querySelectorAll(s)};
+function an(a,b){return Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI}
+function ds(a,b){return Math.hypot(b[0]-a[0],b[1]-a[1])}
+function bone(a,b,t){var d='M'+a+' L'+b;return '<path class="bo" stroke-width="'+(t+3)+'" d="'+d+'"/><path class="bf" stroke-width="'+t+'" d="'+d+'"/>'+[a,b].map(function(q){return '<circle class="bn" cx="'+q[0]+'" cy="'+q[1]+'" r="'+(t*.8)+'"/>'}).join('')}
+function el(c,cl){return '<ellipse class="'+cl+'" cx="'+c[0]+'" cy="'+c[1]+'" rx="'+c[2]+'" ry="'+c[3]+'" transform="rotate('+(c[4]||0)+' '+c[0]+' '+c[1]+')"/>'}
+function mus(a,b,w){return el([(a[0]+b[0])/2,(a[1]+b[1])/2,ds(a,b)*.52,w,an(a,b)],'mz')}
+function skn(a,b,w){return '<path class="sk" stroke-width="'+w+'" d="M'+a+' L'+b+'"/>'}
+function vert(P,n,s){var h='',i,t,x,y,dx,dy;for(i=0;i<=n;i++){t=i/n;x=(1-t)*(1-t)*P[0][0]+2*t*(1-t)*P[1][0]+t*t*P[2][0];y=(1-t)*(1-t)*P[0][1]+2*t*(1-t)*P[1][1]+t*t*P[2][1];dx=2*(1-t)*(P[1][0]-P[0][0])+2*t*(P[2][0]-P[1][0]);dy=2*(1-t)*(P[1][1]-P[0][1])+2*t*(P[2][1]-P[1][1]);h+='<rect class="bn vb" x="'+(-s*.45)+'" y="'+(-s*.6)+'" width="'+(s*.9)+'" height="'+(s*1.2)+'" rx="2" transform="translate('+x.toFixed(1)+' '+y.toFixed(1)+') rotate('+(Math.atan2(dy,dx)*180/Math.PI).toFixed(1)+')"/>'}return h}
+function A(o){var s='',b='',m='',r='',i,j,x,d;
+(o.sil||[]).forEach(function(c){s+=el(c,'se')});s+=o.rs||'';
+(o.limbs||[]).forEach(function(L){var op=L.far?' opacity=".6"':'',ss='',bb='',mm='';for(j=0;j<L.p.length-1;j++){ss+=skn(L.p[j],L.p[j+1],L.w[j]);bb+=bone(L.p[j],L.p[j+1],L.t[j]);mm+=mus(L.p[j],L.p[j+1],L.w[j]*.42)}s+='<g'+op+'>'+ss+'</g>';b+='<g'+op+'>'+bb+'</g>';m+='<g'+op+'>'+mm+'</g>'});
+if(o.tail)for(j=0;j<o.tail.p.length-1;j++)s+=skn(o.tail.p[j],o.tail.p[j+1],o.tail.w);s+=o.rs2||'';
+if(o.rib)for(i=0;i<o.rib[2];i++){x=o.rib[0]+i*(o.rib[1]-o.rib[0])/(o.rib[2]-1);d='M'+x+' '+o.rib[3]+' C'+(x-9)+' '+(o.rib[3]+12)+' '+(x-9)+' '+(o.rib[4]-14)+' '+(x+4)+' '+o.rib[4];b+='<path class="bo" stroke-width="7" d="'+d+'"/><path class="bf" stroke-width="4" d="'+d+'"/>'}
+b+=(o.rb||'')+(o.skull||[]).map(function(c){return el(c,'bn')}).join('');
+if(o.spine)b+=vert(o.spine,o.nv,o.sz||9);
+if(o.bm)m=el(o.bm,'mz')+m;
+(o.rings||[]).forEach(function(q){r+='<circle class="ring" cx="'+q[0]+'" cy="'+q[1]+'" r="15"/>'});
+return '<g style="--sc:'+(o.c||'var(--fur)')+'"><g class="L0">'+s+'</g><g class="L2">'+b+'</g><g class="L1">'+m+'</g><g class="L3">'+r+'</g></g>'}
+var DOG={sil:[[226,108,96,38,-3],[118,84,30,23,-10],[90,92,24,12,8],[132,64,10,22,25]],
+limbs:[{p:[[188,120],[190,160],[186,202],[176,234]],w:[24,17,12],t:[7,6,5],far:1},{p:[[314,114],[294,156],[318,198],[312,234]],w:[32,19,13],t:[8,6,5],far:1},{p:[[172,118],[174,160],[170,202],[160,234]],w:[26,19,13],t:[8,7,6]},{p:[[300,112],[280,156],[304,198],[298,234]],w:[34,20,14],t:[9,7,6]}],
+tail:{p:[[320,98],[344,76],[354,52]],w:11},spine:[[140,82],[226,64],[316,94]],nv:15,sz:9,rib:[172,228,7,84,138],skull:[[116,84,18,14,-10],[92,92,18,7,8]],bm:[226,112,80,28,-3],rings:[[174,160],[280,156]]};
+var HUM={c:'var(--skin)',rs2:'<path class="se3" stroke="var(--pants)" stroke-width="6" stroke-linejoin="round" d="M71 130 H129 L127 178 H103 L100 160 L97 178 H73 Z"/>',sil:[[100,34,22,22]],rs:'<ellipse class="se2" cx="100" cy="100" rx="32" ry="48"/><ellipse class="se" cx="100" cy="56" rx="8" ry="12"/><ellipse class="se" cx="84" cy="246" rx="14" ry="6"/><ellipse class="se" cx="116" cy="246" rx="14" ry="6"/>',
+limbs:[{p:[[72,66],[62,112],[58,152]],w:[17,13],t:[6,5]},{p:[[128,66],[138,112],[142,152]],w:[17,13],t:[6,5]},{p:[[88,142],[86,192],[85,236]],w:[26,18],t:[8,6]},{p:[[112,142],[114,192],[115,236]],w:[26,18],t:[8,6]}],
+spine:[[100,62],[100,100],[100,144]],nv:11,sz:8,skull:[[100,34,16,18,0]],bm:[100,100,24,38,0],rings:[[62,112],[138,112],[86,192],[114,192]],
+rb:(function(){var h='',i,y,d;for(i=0;i<6;i++){y=82+i*9;d='M98 '+y+' C84 '+(y-4)+' 76 '+(y+10)+' 94 '+(y+12)+' M102 '+y+' C116 '+(y-4)+' 124 '+(y+10)+' 106 '+(y+12);h+='<path class="bo" stroke-width="6" d="'+d+'"/><path class="bf" stroke-width="3.5" d="'+d+'"/>'}return h+'<path class="bn" d="M80 140 Q100 162 120 140 L116 154 Q100 170 84 154Z"/><path class="bo" stroke-width="7" d="M92 66 L72 66 M108 66 L128 66"/><path class="bf" stroke-width="4" d="M92 66 L72 66 M108 66 L128 66"/>'})()};
+$$('.flip').forEach(function(f){function t(){f.classList.toggle('on');f.classList.add('seen');f.setAttribute('aria-pressed',f.classList.contains('on'));$('#fm').textContent=$$('.flip.seen').length==2?'يعني: الجسم متشابه من جوه، والاختلاف بسيط في العظام والعضلات حسب طريقة الحركة.':''}f.onclick=t;f.onkeydown=function(e){if(e.key=='Enter'||e.key==' '){e.preventDefault();t()}}});
+/* ---- section 1: similarities, find the part ---- */
+$('#dg').innerHTML=A(DOG)+'<circle id="hd" class="hint" r="20" style="display:none"/>';
+$('#hm').innerHTML=A(HUM)+'<circle id="hh" class="hint" r="16" style="display:none"/>';
+var ST=[
+{v:'skel',h:'العمود الفقري عبارة عن عظام صغيرة اسمها فقرات، متراصة ورا بعض. عند الإنسان: واقف من الراس للحوض، وحواليه القفص الصدري.',d:'عند الكلب: نفس الفكرة بالظبط، فقرات ورا بعض، بس ممدودة أفقيًا من الراس للديل، وحواليها ضلوع.',qd:'لاقي العمود الفقري عند الكلب (دوس عليه).',qh:'تمام! دلوقتي لاقيه عند الإنسان.',td:[[170,74],[226,76],[282,82]],rd:20,th:[[100,100],[100,76],[100,124]],rh:14},
+{v:'joint',h:'المفصل هو مكان التقاء عظمتين، وهو اللي بيخلّيهم يتثنوا. عند الإنسان: الكوع والركبة.',d:'عند الكلب: في رجله الأمامية كوع، وفي رجله الخلفية ركبة، بنفس الفكرة.',qd:'لاقي ركبة الرجل الخلفية عند الكلب.',qh:'تمام! دلوقتي لاقي ركبة الإنسان.',td:[[280,156]],rd:20,th:[[86,192],[114,192]],rh:16},
+{v:'muscle',h:'العضلات الحمرا متصلة بالعظام وبتغطيها، وهي اللي بتشدّها وقت الحركة.',d:'عند الكلب: نفس الحكاية، عضلات متصلة بعظام رجله وجسمه وبتغطيها.',qd:'لاقي عضلة الفخذ في رجل الكلب الخلفية.',qh:'تمام! دلوقتي لاقي عضلة الفخذ عند الإنسان.',td:[[290,132]],rd:26,th:[[88,166],[112,166]],rh:18}];
+var cur=-1,stg=0,dn=[0,0,0],tries=0;
+function s1m(t,c){var m=$('#s1m');m.textContent=t;m.style.color=c||''}
+function s1r(){$$('#s1b button').forEach(function(b,i){b.classList.toggle('on',i==cur);b.firstChild.textContent=dn[i]?'✓':['١','٢','٣'][i]});
+$('#dg').dataset.v=$('#hm').dataset.v=cur<0?'sil':ST[cur].v;
+if(cur==0){$('#dg').setAttribute('data-hl',1);$('#hm').setAttribute('data-hl',1)}else{$('#dg').removeAttribute('data-hl');$('#hm').removeAttribute('data-hl')}
+$('#hd').style.display=$('#hh').style.display='none';
+if(cur>=0)$('#s1x').innerHTML='<b>'+ST[cur].h+'</b><br>'+ST[cur].d}
+$$('#s1b button').forEach(function(b){b.onclick=function(){cur=+b.dataset.i;stg=dn[cur]?2:0;tries=0;s1r();s1m(stg==2?'خلصت الخطوة دي. جرّب اللي بعدها.':ST[cur].qd)}});
+function hit(svg,e,T,r){var p=svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;var q=p.matrixTransform(svg.getScreenCTM().inverse());return T.some(function(t){return Math.hypot(q.x-t[0],q.y-t[1])<=r})}
+function tap(isDog){return function(e){if(cur<0){s1m('دوس على رقم الأول عشان نعمل أشعة.');return}if(stg==2){s1m('الخطوة دي خلصت. اختار رقم تاني.');return}var S=ST[cur],want=stg==0;
+if(isDog!=want){s1m(want?'ابدأ بالكلب الأول.':'دلوقتي دوّر عند الإنسان.','var(--red)');return}
+if(hit(e.currentTarget,e,isDog?S.td:S.th,isDog?S.rd:S.rh)){tries=0;$('#hd').style.display=$('#hh').style.display='none';if(stg==0){stg=1;s1m('صح! '+S.qh,'var(--ok)')}else{stg=2;dn[cur]=1;s1r();s1m(dn[0]&&dn[1]&&dn[2]?'برافو! لقيت الأجزاء الـ٣ عند الاتنين: بنية الإنسان والكلب متشابهة من جوه.':'برافو! نفس الجزء عند الإنسان. كمّل للرقم اللي بعده.','var(--ok)')}}
+else{tries++;s1m('لأ، مش هنا. حاول تاني'+(tries>1?' (بص على الدايرة المنقطة).':'.'),'var(--red)');if(tries>1){var h=isDog?$('#hd'):$('#hh'),t=(isDog?S.td:S.th)[0];h.setAttribute('cx',t[0]);h.setAttribute('cy',t[1]);h.style.display=''}}}}
+$('#dg').onclick=tap(1);$('#hm').onclick=tap(0);s1r();
+/* ---- section 2: mechanism ---- */
+(function(){var S0=[130,34],E=[146,134],Ln=104,u=0,raf=0;
+$('#limb').innerHTML='<svg viewBox="0 0 320 270" role="img" aria-label="رجل حيوان: عظمتان ومفصل وعضلة">'+bone(S0,E,14)+'<g id="lw"></g><path id="tn" fill="none" stroke="#7d1d16" stroke-width="3"/><ellipse id="mu" class="mz"/><circle id="a1" r="5" fill="#7d1d16"/><circle id="a2" r="5" fill="#7d1d16"/><path id="ar" fill="none" stroke="var(--sun)" stroke-width="5" stroke-linecap="round"/><circle id="rg" class="ring" cx="146" cy="134" r="22"/><text class="lb" x="40" y="62" text-anchor="middle">عظمة</text><text class="lb" x="40" y="136" text-anchor="middle">مفصل</text><text id="tl" class="lb" x="40" y="215" text-anchor="middle">عظمة</text><text id="tm" class="lb" x="260" y="90" text-anchor="middle">عضلة</text></svg>';
+function dr(){var a=u*72*Math.PI/180,dx=Math.sin(a),dy=Math.cos(a),H=[E[0]+Ln*dx,E[1]+Ln*dy],A0=[S0[0]+.3*(E[0]-S0[0]),S0[1]+.3*(E[1]-S0[1])],Ap=[A0[0]+20,A0[1]],B0=[E[0]+.38*Ln*dx,E[1]+.38*Ln*dy],Bp=[B0[0]+20*Math.cos(a),B0[1]-20*Math.sin(a)],d=ds(Ap,Bp),c=[(Ap[0]+Bp[0])/2,(Ap[1]+Bp[1])/2],mu=$('#mu');
+$('#lw').innerHTML=bone(E,H,14);$('#tl').setAttribute('x',H[0]);$('#tl').setAttribute('y',H[1]+34);
+mu.setAttribute('cx',c[0]);mu.setAttribute('cy',c[1]);mu.setAttribute('rx',d/2);mu.setAttribute('ry',8+24*u);mu.setAttribute('transform','rotate('+an(Ap,Bp)+' '+c[0]+' '+c[1]+')');mu.style.fill='hsl(4,'+(55+20*u)+'%,'+(76-32*u)+'%)';
+$('#tn').setAttribute('d','M'+A0+' L'+Ap+' M'+B0+' L'+Bp);
+$('#a1').setAttribute('cx',Ap[0]);$('#a1').setAttribute('cy',Ap[1]);$('#a2').setAttribute('cx',Bp[0]);$('#a2').setAttribute('cy',Bp[1]);
+$('#tm').setAttribute('x',Math.max(Ap[0],Bp[0])+46);$('#tm').setAttribute('y',c[1]);
+var e1=[E[0],E[1]+64],e2=[E[0]+64*dx,E[1]+64*dy];$('#ar').setAttribute('d',u>.08?'M'+e1+' A64 64 0 0 0 '+e2:'');$('#ar').style.opacity=u>.3?1:.4;
+$('#rg').style.opacity=u>.75?1:0;
+$('#c1').classList.toggle('on',u>.05);$('#c2').classList.toggle('on',u>.4);$('#c3').classList.toggle('on',u>.75);$('#ls').value=u*100}
+function go(to){cancelAnimationFrame(raf);var f=u,t0=null;function s(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1800);u=f+(to-f)*k;dr();if(k<1)raf=requestAnimationFrame(s)}raf=requestAnimationFrame(s)}
+$('#ls').oninput=function(){cancelAnimationFrame(raf);u=this.value/100;dr()};$('#lp').onclick=function(){go(1)};$('#lr').onclick=function(){go(0)};dr()})();
+/* ---- section 3: animals ---- */
+var CH={c:'#e0b050',sil:[[170,92,84,26,-6],[66,90,24,18,10],[48,92,16,9,10],[80,74,7,12,0]],limbs:[{p:[[122,104],[96,134],[66,158]],w:[20,13],t:[6,5],far:1},{p:[[250,100],[282,134],[320,150]],w:[24,14],t:[7,5],far:1},{p:[[110,102],[80,128],[46,146]],w:[22,14],t:[7,5]},{p:[[238,98],[272,126],[318,132]],w:[26,15],t:[8,5]}],tail:{p:[[254,84],[290,64],[330,70]],w:10},spine:[[88,86],[168,58],[250,84]],nv:14,sz:8,rib:[122,170,6,70,114],skull:[[66,90,16,12,10]],bm:[168,92,70,20,-6],rings:[[80,128],[272,126]]};
+var RB={c:'#d9c7b0',sil:[[170,112,64,38,-8],[92,102,24,19,5],[102,66,9,28,15],[114,68,9,26,25],[236,110,10,10,0]],limbs:[{p:[[126,132],[118,160],[112,184]],w:[16,11],t:[5,4],far:1},{p:[[118,130],[110,160],[104,184]],w:[17,12],t:[6,4]},{p:[[210,120],[176,150],[222,174],[262,180]],w:[36,19,13],t:[8,7,5]}],spine:[[110,100],[165,76],[225,104]],nv:13,sz:8,rib:[142,186,6,80,128],skull:[[92,102,14,11,5]],bm:[170,114,54,26,-8],rings:[[176,150]]};
+var PG={c:'#8ea0b3',sil:[[170,108,52,30,-12],[112,86,15,14,0]],rs:'<path class="se" d="M100 84 L82 90 L100 94Z"/>',limbs:[{p:[[170,134],[168,160],[162,178]],w:[8,5],t:[4,3]}],tail:{p:[[216,122],[262,136]],w:22},spine:[[122,92],[168,92],[212,118]],nv:11,sz:7,rib:[150,184,4,92,128],skull:[[112,86,10,9,0]],bm:[170,110,40,20,-12],rings:[]};
+var PW={c:'#8ea0b3',limbs:[{p:[[150,92],[190,50],[240,32]],w:[34,24],t:[7,6]}]};
+var AN={run:{o:CH,c:'run',g:1,t:'الجري بسرعة: أطوال العظام واتصال العضلات بيها مناسبة للجري.'},fly:{o:PG,c:'fly',g:0,t:'الطيران في السماء: عظام الجناح وعضلاته مناسبة للطيران.',w:1},hop:{o:RB,c:'hop',g:1,t:'القفز بسرعة: عظام الأرجل الخلفية وعضلاتها مناسبة للقفز.'}},ak='run',av='sil';
+function ani(){var a=AN[ak];$('#an').innerHTML='<svg viewBox="0 0 360 200" data-v="'+av+'" role="img" aria-label="حيوان بيتحرك">'+(a.g?'<path class="gnd'+(ak=='run'?' go':'')+'" d="M0 190 H360"/>':'')+'<g class="'+a.c+'">'+A(a.o)+(a.w?'<g class="wing">'+A(PW)+'</g>':'')+'</g></svg>';$('#am').textContent=a.t;$$('#at button').forEach(function(b){b.classList.toggle('on',b.dataset.k==ak)});$$('#vt button').forEach(function(b){b.classList.toggle('on',b.dataset.v==av)})}
+$$('#at button').forEach(function(b){b.onclick=function(){ak=b.dataset.k;ani()}});$$('#vt button').forEach(function(b){b.onclick=function(){av=b.dataset.v;ani()}});ani();
+/* ---- section 4: comparison ---- */
+function LIM(p,w,t,c){var s='',b='',i;for(i=0;i<p.length-1;i++){s+=skn(p[i],p[i+1],w[i]);b+=bone(p[i],p[i+1],t[i])}return '<g style="--sc:'+c+'"><g opacity=".5">'+s+'</g></g>'+b}
+function ring(q){return '<circle class="ring" cx="'+q[0]+'" cy="'+q[1]+'" r="15"/>'}
+function fk(h,L,A0,A1,t){var x=0,y=0,p=[[0,0]],i,a;for(i=0;i<3;i++){a=(A0[i]+(A1[i]-A0[i])*t)*Math.PI/180;x+=L[i]*Math.sin(a);y+=L[i]*Math.cos(a);p.push([x,y])}var mx=Math.max.apply(null,p.map(function(q){return q[1]})),oy=228-mx;return p.map(function(q){return [+(q[0]+h).toFixed(1),+(q[1]+oy).toFixed(1)]})}
+function CM(k,t){var g='<path class="gnd" d="M10 232 H390"/>';
+if(k=='f'){var ha=[[110,40],[110,125],[107,195],[105,222]],da=[[290,40],[298,120],[290,195],[284,230]];
+g+='<ellipse cx="110" cy="30" rx="40" ry="22" fill="var(--shirt)"/><ellipse cx="290" cy="34" rx="46" ry="26" fill="var(--fur)"/>'+LIM(ha,[22,16,10],[8,6,5],'var(--skin)')+LIM(da,[24,17,12],[8,7,5],'var(--fur)')+ring(ha[1])+ring(da[1])+'<path d="M340 120 V232" stroke="var(--red)" stroke-width="2.5" stroke-dasharray="4 4"/><text class="lb" x="345" y="180" text-anchor="end" style="font-size:13px">الكوع أعلى من الأرض</text><text class="lb" x="110" y="252" text-anchor="middle">يد الإنسان</text><text class="lb" x="290" y="252" text-anchor="middle">الرجل الأمامية للكلب</text>'}
+else{var hp=fk(110,[62,62,26],[-40,50,-85],[0,0,-90],t),rp=fk(300,[38,72,58],[-60,60,-88],[-4,2,-80],t),hy=hp[0][1],ry=rp[0][1];
+g+='<rect x="86" y="'+(hy-92)+'" width="48" height="96" rx="18" fill="var(--shirt)"/>'+LIM(hp,[26,18,10],[8,6,5],'var(--skin)')+ring(hp[1])+'<ellipse cx="270" cy="'+(ry-8)+'" rx="46" ry="26" fill="#d9c7b0"/><circle cx="224" cy="'+(ry-16)+'" r="15" fill="#d9c7b0"/><ellipse cx="232" cy="'+(ry-42)+'" rx="5" ry="16" fill="#d9c7b0"/>'+LIM(rp,[36,19,13],[8,7,5],'#d9c7b0')+ring(rp[1])+'<text class="lb" x="110" y="252" text-anchor="middle">رجل الإنسان</text><text class="lb" x="290" y="252" text-anchor="middle">الرجل الخلفية للأرنب</text>'}
+return '<svg viewBox="0 0 400 260" role="img" aria-label="مقارنة الأطراف">'+g+'</svg>'}
+var CT={f:'يقع مفصل الكوع في موضع أعلى من الأرض ليتناسب مع وضعية وقوف الكلب على أطرافه الأربعة.',h:'مفصل الركبة في الأرنب في الأطراف الخلفية يكون متصلًا بعظام طويلة تجعله يستطيع القفز بسهولة.'};
+function cmp(k){$('#cm').innerHTML=CM(k,+$('#hr').value/100);$('#cmt').textContent=CT[k];$('#hs').hidden=k=='f';$$('#ct button').forEach(function(b){b.classList.toggle('on',b.dataset.k==k)});cmp.k=k}
+$$('#ct button').forEach(function(b){b.onclick=function(){cmp(b.dataset.k)}});$('#hr').oninput=function(){cmp(cmp.k)};cmp('f');
+/* ---- quizzes ---- */
+function qb(q,o,a,ok,no){return '<div class="qb" data-a="'+a+'" data-ok="'+ok+'" data-no="'+no+'"><div class="qt">'+q+'</div>'+o.map(function(t,i){return '<button class="opt" data-i="'+i+'">'+t+'</button>'}).join('')+'<div class="res"></div></div>'}
+function tf(q,a,ok,no){return qb(q,['صح','خطأ'],a?0:1,ok,no)}
+function oq(q,m){return '<div class="qb"><div class="qt">'+q+'</div><textarea rows="2"></textarea><button class="mv">الإجابة النموذجية</button><div class="res md" hidden>'+m+'</div></div>'}
+$('#q0').innerHTML=qb('اختار الإجابة:',['العظام والعضلات','العضلات والجلد'],0,'صح! الحيوانات زينا عندها عظام وعضلات بتتحرك بيها.','لأ، فكّر: إيه اللي بيتحرك وإيه اللي بيحرّكه؟');
+$('#s1').innerHTML=qb('١) أي مما يلي يتشابه فيه الإنسان مع الكلب؟',['الهيكل العظمي والعمود الفقري','الريش','الأجنحة'],0,'صح!','غلط، فكّر في تركيب الجسم اللي بيساعد على الحركة.')+
+qb('٢) تتحرك الحيوانات لما العضلات ... فتسحب العظام عند المفاصل:',['تنبسط','تنقبض','تتجمد'],1,'صح! الانقباض بيشدّ العظام.','غلط، جرّب السلايدر في التجربة ٢.')+
+qb('٣) إيه دور المفاصل في حركة الحيوان؟',['تغطي العظام','تسحب العظام','تساعد على تحريك العظام بسهولة'],2,'صح!','غلط، المفصل هو مكان التقاء العظام.')+
+qb('٤) الحيوان اللي بيقفز بسرعة:',['الفهد','الحمامة','الأرنب'],2,'صح!','غلط، شوف تجربة ٣.')+
+qb('٥) مفصل الركبة في الأرنب متصل بعظام طويلة تجعله:',['يقفز بسهولة','يطير في السماء','يسبح'],0,'صح!','غلط، شوف تجربة ٤.');
+$('#s2').innerHTML=tf('١) تختلف أطوال العظام وطريقة اتصال العضلات بها قليلًا من حيوان لآخر.',1,'صح!','غلط، الاختلاف حسب طريقة الحركة.')+
+tf('٢) الكلاب والقطط لا تمتلك عمودًا فقريًا.',0,'صح، الجملة غلط! الكلاب والقطط عندها عمود فقري.','الجملة غلط: الكلاب والقطط عندها عمود فقري.')+
+tf('٣) العضلات متصلة بالعظام وتغطيها عند الإنسان والكلب.',1,'صح!','غلط، شوف تجربة ١.')+
+tf('٤) مفصل الكوع في الكلب في موضع أعلى من الأرض ليتناسب مع وقوفه على أطرافه الأربعة.',1,'صح!','غلط، شوف تجربة ٤.')+
+'<div class="gh">علل</div>'+oq('تتحرك كثير من الحيوانات مثل الكلاب والقطط والأرانب بطريقة تشبه حركة الإنسان.','لأنها تمتلك داخل أجسامها هيكلًا عظميًا وعمودًا فقريًا ومفاصل تساعدها على الحركة.')+
+oq('تختلف أطوال العظام وطريقة اتصال العضلات بها من حيوان لآخر.','لاختلاف طريقة الحركة في الحيوان، مثل: الجري بسرعة أو الطيران في السماء.')+
+oq('يمتلك الأرنب عظامًا طويلة في الأطراف الخلفية.','ليستطيع القفز بسهولة.');
+document.body.addEventListener('click',function(e){var m=e.target.closest('.mv');if(m){m.nextElementSibling.hidden=false;return}
+var b=e.target.closest('.opt');if(!b)return;var q=b.closest('.qb'),ok=+b.dataset.i==+q.dataset.a,r=q.querySelector('.res');q.querySelectorAll('.opt').forEach(function(x){x.classList.remove('good','bad')});b.classList.add(ok?'good':'bad');r.className='res '+(ok?'ok':'no');r.textContent=ok?q.dataset.ok:q.dataset.no;if(ok&&q.closest('#s1,#s2'))q.classList.add('done');up()});
+function up(){$('#sc').textContent='إجاباتك الصح: '+$$('#s1 .done,#s2 .done').length+' من ٩'}up();
+[1,2,3].forEach(function(i){$('#t'+i).onclick=function(){[1,2,3].forEach(function(j){$('#s'+j).hidden=j!=i;$('#t'+j).classList.toggle('on',j==i)})}});
+/* ---- challenge: label the dog ---- */
+(function(){var T=[['عمود فقري',226,76],['مفاصل',280,156],['عظام',172,190],['عضلات',296,128]],sel=null,cnt=0,mk='';
+T.forEach(function(t,i){mk+='<circle data-t="'+i+'" cx="'+t[1]+'" cy="'+t[2]+'" r="13" fill="var(--sun)" fill-opacity=".55" stroke="var(--sun)" stroke-width="3" stroke-dasharray="5 4" style="cursor:pointer"/><text x="'+t[1]+'" y="'+(t[2]+5)+'" text-anchor="middle" class="lb" style="pointer-events:none">'+(i+1)+'</text>'});
+$('#ch').innerHTML='<svg viewBox="60 40 310 205" data-v="all" role="img" aria-label="رسمة كلب">'+A(DOG)+mk+'</svg>';
+[1,3,0,2].forEach(function(n){$('#chips').insertAdjacentHTML('beforeend','<button data-n="'+n+'">'+T[n][0]+'</button>')});
+$('#chips').onclick=function(e){var b=e.target.closest('button');if(!b)return;sel=+b.dataset.n;$$('#chips button').forEach(function(x){x.classList.toggle('on',x===b)})};
+$('#ch').onclick=function(e){var t=e.target.closest('[data-t]'),r=$('#lr2');if(!t)return;if(sel===null){r.className='res no';r.textContent='اختار الاسم الأول.';return}
+var i=+t.dataset.t;if(t.dataset.d)return;if(i!=sel){r.className='res no';r.textContent='مش المكان ده. جرّب مكان تاني.';return}
+t.dataset.d=1;t.setAttribute('fill','var(--ok)');t.setAttribute('stroke','var(--ok)');t.removeAttribute('stroke-dasharray');t.insertAdjacentHTML('afterend','<text class="lb" x="'+(T[i][1]-(i==3?0:22))+'" y="'+(T[i][2]-20)+'" text-anchor="middle">'+T[i][0]+'</text>');
+$('#chips [data-n="'+i+'"]').style.visibility='hidden';sel=null;cnt++;r.className='res ok';r.textContent=cnt==4?'برافو! كل الأسماء في أماكنها.':'صح! كمّل.'}})();
+</script>
+</body>
+</html>
