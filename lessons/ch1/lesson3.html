@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>الهيكل العظمي الكامل للجسم | LearnLayer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8fcfd;--card:#fff;--ink:#1f3d52;--ink2:#5a7587;--line:#d3e5ec;--teal:#17b8a6;--tint:#e5f6f3;--red:#e8584f;--blue:#3b9ad9;--sun:#ffc83d;--org:#ff8a3d;--bone:#f7eedb;--boneline:#c9b88f;--skin:#f4d3b2;--shirt:#3e6fa8;--ok:#1a9a55;--grid:#e6f1f5;--h1:#d6f3ee;--h2:#fff1c6;--stage:#eaf6f9;--note:#fff0a0;--noteink:#4a3d00;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#081426;--card:#0f2742;--ink:#e6eef7;--ink2:#9db4c8;--line:#244764;--teal:#2dd4bf;--tint:#12304a;--red:#ef6a5e;--blue:#6bb8dc;--bone:#e3d9c0;--boneline:#8a7c5a;--skin:#d9aa80;--shirt:#2d527e;--ok:#5fd18d;--grid:#0d2238;--h1:#0f2a3f;--h2:#143a66;--stage:#10304a;--note:#6b5d12;--noteink:#fff6c9}}
+:root[data-theme="dark"]{--bg:#081426;--card:#0f2742;--ink:#e6eef7;--ink2:#9db4c8;--line:#244764;--teal:#2dd4bf;--tint:#12304a;--red:#ef6a5e;--blue:#6bb8dc;--bone:#e3d9c0;--boneline:#8a7c5a;--skin:#d9aa80;--shirt:#2d527e;--ok:#5fd18d;--grid:#0d2238;--h1:#0f2a3f;--h2:#143a66;--stage:#10304a;--note:#6b5d12;--noteink:#fff6c9}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background-color:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;color:var(--ink);font-family:Cairo,Tahoma,sans-serif;line-height:1.9;font-size:18px}
+.hero{background:linear-gradient(135deg,var(--h1),var(--h2));padding:8px 14px;border-bottom:4px solid var(--teal);display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap}
+.hero h1{font-size:1.35rem;margin:0;font-weight:800}
+.tg{display:inline-block;background:var(--sun);color:#3a2a00;font-weight:800;border-radius:8px;padding:0 12px;font-size:.9rem}
+.lesson{max-width:1240px;margin:0 auto;padding:14px 14px 24px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) minmax(0,.8fr);gap:18px;align-items:start}
+.stage{position:sticky;top:10px;aspect-ratio:300/520;width:min(100%,400px,calc((100vh - 110px)*300/520));min-width:220px;margin:0 auto;border:3px solid var(--line);border-radius:22px;overflow:hidden;background:var(--stage)}
+.stage svg{position:absolute;inset:0;width:100%;height:100%}
+.bub{position:absolute;inset-inline:10px;bottom:10px;background:var(--card);border:2.5px solid var(--ink2);border-radius:18px;padding:2px 12px;text-align:center;line-height:1.5;font-size:.9rem}
+.bub b{display:block;font-size:1rem}
+.lesson{position:relative;overflow-x:clip}
+.panel{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:16px 18px}
+.panel h2{font-size:1.45rem;font-weight:800;margin:4px 0 6px;line-height:1.5}
+.panel p{margin:6px 0}
+.def{background:var(--tint);border-radius:12px;padding:8px 14px;margin:10px 0;border-inline-start:5px solid var(--teal);font-size:.98rem}
+.def b{color:var(--ink)}
+.demo{margin-top:12px;border-top:2px dashed var(--line);padding-top:10px}
+.msg{min-height:3.4em;margin-top:6px;font-weight:600}
+button{font-family:inherit;font-size:1rem;font-weight:600;border:2px solid var(--ink);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 16px;cursor:pointer;margin:4px 3px}
+button:hover{background:var(--tint)}button.on{background:var(--ink);color:var(--bg)}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.opt{display:block;width:100%;text-align:right;border-radius:12px;margin:5px 0}
+.good{background:var(--ok)!important;border-color:var(--ok)!important;color:#fff!important}.bad{background:var(--red)!important;border-color:var(--red)!important;color:#fff!important}
+.qb{border:2px solid var(--line);border-radius:14px;padding:8px 12px;margin:10px 0}.qt{font-weight:800}
+.res{margin-top:4px;font-size:.98rem}.res.ok{color:var(--ok);font-weight:700}.res.no{color:var(--red);font-weight:700}.res.md{background:var(--tint);border-radius:10px;padding:6px 12px}
+.score{display:inline-block;border:2px solid var(--teal);border-radius:999px;padding:0 16px;font-weight:800}
+textarea{width:100%;font-family:inherit;font-size:1rem;border:2px solid var(--line);border-radius:10px;padding:6px 10px;background:var(--bg);color:var(--ink)}
+input[type=range]{width:100%;accent-color:var(--teal)}
+.chip{display:inline-block;border-radius:999px;padding:0 12px;font-weight:700;font-size:.92rem;margin:2px;background:var(--teal);color:#042a26}
+.hero2{position:relative;height:230px;margin:10px 0;background:var(--tint);border-radius:20px;overflow:hidden}
+.big{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;z-index:2;pointer-events:none}
+.big b{font-size:clamp(4.5rem,15vw,6.5rem);font-weight:800;color:var(--teal);text-shadow:0 3px 0 var(--card)}.big span{font-size:1.6rem;font-weight:800}
+.fb{position:absolute;left:var(--x);top:var(--y);width:var(--w);height:var(--w);margin:calc(var(--w)/-2) 0 0 calc(var(--w)/-2);animation:pop .9s cubic-bezier(.2,1.5,.4,1) var(--d) both}
+@keyframes pop{from{left:50%;top:50%;transform:scale(0) rotate(-120deg);opacity:0}to{left:var(--x);top:var(--y);transform:none;opacity:1}}
+.fb svg{width:100%;height:100%;overflow:visible;animation:fl var(--t) ease-in-out infinite alternate}
+@keyframes fl{from{transform:translate(-7px,-9px) rotate(-16deg)}to{transform:translate(8px,10px) rotate(18deg)}}
+/* sticky note */
+.note{position:sticky;top:10px;background:var(--note);color:var(--noteink);border-radius:6px 6px 18px 6px;padding:14px 14px 18px;box-shadow:0 8px 18px rgba(0,0,0,.18);transform:rotate(-1.2deg);font-size:.92rem;line-height:1.6}
+.note .nt{display:block;font-weight:800;font-size:1.05rem;border-bottom:2px dashed currentColor;padding-bottom:4px;margin-bottom:8px}
+.note .root{background:var(--noteink);color:var(--note);border-radius:12px;text-align:center;font-weight:800;padding:2px 8px}
+.note ul{list-style:none;margin:8px 0 0;padding:0 14px 0 0;border-inline-end:3px solid currentColor}
+.note li{position:relative;margin:7px 0;padding:2px 10px;border-radius:10px;opacity:.25;transition:opacity .4s,background .4s}
+.note li::before{content:"";position:absolute;inset-inline-end:-14px;top:.9em;width:12px;border-top:3px solid currentColor}
+.note li.on{opacity:1}.note li.cur{background:rgba(255,255,255,.55);outline:2px solid var(--red)}
+.note li b{display:block}.note li span{font-size:.86rem}
+.dark-fix{color:inherit}
+/* figure */
+.sil{opacity:.96;transition:opacity .6s}
+.sk{opacity:0;transition:opacity .6s}
+svg[data-x="1"] .sil{opacity:.2}svg[data-x="1"] .sk{opacity:1}
+svg[data-c="1"] .sk{opacity:0}
+#fig{transition:transform .9s ease;transform-origin:150px 505px}
+svg[data-c="1"] #fig{transform:scale(1.2,.4)}
+.bn{fill:var(--bone);stroke:var(--boneline);stroke-width:2}
+.bo{fill:none;stroke:var(--boneline);stroke-linecap:round}.bf{fill:none;stroke:var(--bone);stroke-linecap:round}
+.part{transition:opacity .4s}
+svg[data-f="skull"] .part:not(#skull),svg[data-f="ribs"] .part:not(#ribs),svg[data-f="spine"] .part:not(#spine){opacity:.18}
+svg[data-f="skull"] #skull .bn,svg[data-f="ribs"] #ribs .bn,svg[data-f="spine"] #spine .bn{stroke:var(--red);stroke-width:3}
+svg[data-f="ribs"] #ribs .bo{stroke:var(--red)}
+.org{opacity:0;transition:opacity .5s}
+svg[data-o="1"][data-f="skull"] #brain,svg[data-o="1"][data-f="ribs"] #lungs{opacity:1}
+svg[data-o="1"] .cover{opacity:.3!important}
+#scene [data-n]{cursor:pointer}
+@media(max-width:1000px){.lesson{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)}.note{grid-column:1/-1;position:static}}
+@media(max-width:700px){.lesson{grid-template-columns:1fr}.stage{aspect-ratio:auto;height:40vh;width:100%}body{font-size:17px}}
+.pn{display:flex;justify-content:space-between;gap:10px;margin-top:14px;border-top:2px dashed var(--line);padding-top:10px}
+.pn button{margin:0;padding:6px 22px}
+.pn #nx{margin-inline-start:auto;background:var(--teal);border-color:var(--teal);color:#042a26}
+.pn button:disabled{opacity:.35;cursor:default}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.fb,.fb svg{animation:none!important}}
+</style>
+</head>
+<body>
+<header class="hero"><span class="tg">معمل الحركة | الدرس الثالث</span><h1>الهيكل العظمي الكامل للجسم</h1></header>
+<main class="lesson">
+<div class="stage">
+<svg id="scene" viewBox="0 0 300 520" role="img" aria-label="جسم طفل وهيكله العظمي" data-x="0" data-f="" data-o="0" data-c="0">
+<defs><g id="armS"><circle class="bn" cx="110" cy="102" r="7"/><path class="bo" d="M110 102 L96 185" stroke-width="11"/><path class="bf" d="M110 102 L96 185" stroke-width="8"/><path class="bo" d="M96 185 L92 262" stroke-width="9"/><path class="bf" d="M96 185 L92 262" stroke-width="6"/><ellipse class="bn" cx="91" cy="274" rx="7" ry="11"/></g>
+<g id="legS"><path class="bo" d="M132 300 L130 395" stroke-width="13"/><path class="bf" d="M132 300 L130 395" stroke-width="10"/><circle class="bn" cx="130" cy="402" r="8"/><path class="bo" d="M130 410 L128 490" stroke-width="10"/><path class="bf" d="M130 410 L128 490" stroke-width="7"/><ellipse class="bn" cx="124" cy="499" rx="17" ry="6"/></g></defs>
+<g id="fig">
+<g id="low">
+<g class="sil"><path d="M132 280 L130 495 M168 280 L170 495" stroke="#2d527e" stroke-width="38" stroke-linecap="round" fill="none"/><ellipse cx="124" cy="505" rx="22" ry="9" fill="#fff" stroke="#9fb4c8" stroke-width="2"/><ellipse cx="176" cy="505" rx="22" ry="9" fill="#fff" stroke="#9fb4c8" stroke-width="2"/></g>
+<g class="sk"><g class="part" data-n="عظام الحوض"><path class="bn" d="M118 258 C112 285 125 308 150 300 C175 308 188 285 182 258 C165 266 135 266 118 258Z"/></g>
+<g class="part" data-n="عظمة الفخذ والساق"><use href="#legS"/><g transform="translate(300,0) scale(-1,1)"><use href="#legS"/></g></g></g>
+</g>
+<g id="up">
+<g class="sil"><rect x="106" y="90" width="88" height="180" rx="34" fill="var(--shirt)"/><path d="M112 104 L92 262 M188 104 L208 262" stroke="var(--skin)" stroke-width="18" stroke-linecap="round" fill="none"/><rect x="140" y="78" width="20" height="18" fill="var(--skin)"/><circle cx="150" cy="50" r="36" fill="var(--skin)"/><circle cx="138" cy="48" r="3" fill="#33505f"/><circle cx="162" cy="48" r="3" fill="#33505f"/><path d="M140 62 Q150 70 160 62" stroke="#33505f" stroke-width="2.5" fill="none" stroke-linecap="round"/></g>
+<g class="sk">
+<g id="skull" class="part cover" data-n="الجمجمة"><ellipse class="bn" cx="150" cy="48" rx="29" ry="31"/><path class="bn" d="M133 66 L167 66 L162 82 Q150 90 138 82Z"/><ellipse cx="139" cy="52" rx="6" ry="7" fill="#33505f"/><ellipse cx="161" cy="52" rx="6" ry="7" fill="#33505f"/><path d="M150 60 L146 68 L154 68Z" fill="#33505f"/></g>
+<g id="brain" class="org"><path d="M150 24 C172 22 180 46 169 56 C161 64 139 64 131 56 C120 46 128 22 150 24Z" fill="#f2a1b5" stroke="#c9667f" stroke-width="2"/><path d="M150 26 V62 M138 36 Q145 44 138 52 M162 36 Q155 44 162 52" fill="none" stroke="#c9667f" stroke-width="1.6"/></g>
+<g id="spine" class="part" data-n="العمود الفقري (الفقرات)"><g id="vert"></g></g>
+<g id="ribs" class="part cover" data-n="القفص الصدري (الضلوع)"><g id="rb"></g><rect class="bn" x="145" y="106" width="10" height="72" rx="4"/></g>
+<g id="lungs" class="org"><ellipse cx="126" cy="142" rx="20" ry="34" fill="#a7d9ef" stroke="#5aa3c8" stroke-width="2"/><ellipse cx="174" cy="142" rx="20" ry="34" fill="#a7d9ef" stroke="#5aa3c8" stroke-width="2"/><path d="M158 140 C150 126 132 138 158 168 C184 138 166 126 158 140Z" fill="#e8584f" stroke="#a82d26" stroke-width="2"/></g>
+<g class="part" data-n="عظمة الترقوة والذراع"><path class="bo" d="M148 98 Q130 94 112 100 M152 98 Q170 94 188 100" stroke-width="8"/><path class="bf" d="M148 98 Q130 94 112 100 M152 98 Q170 94 188 100" stroke-width="5"/><use href="#armS"/><g transform="translate(300,0) scale(-1,1)"><use href="#armS"/></g></g>
+</g></g>
+</g>
+</svg>
+<div class="bub" id="bub"><b id="b1"></b><span id="b2"></span></div>
+</div>
+<section class="panel"><div id="panel"></div><div class="pn"><button id="pv">السابق</button><button id="nx">التالي</button></div></section>
+<aside class="note" id="note"><b class="nt">الملخص</b>
+<div class="root">الهيكل العظمي</div>
+<ul>
+<li data-s="1"><b>إيه هو؟</b><span>بنية تتحد فيها عظام كتير تشكّل الجسم بأكمله، حوالي ٢٠٦ عظمة</span></li>
+<li data-s="2"><b>نظام حي متكامل</b><span>بيشتغل مع العضلات والمفاصل</span></li>
+<li data-s="3"><b>وظيفة ١: الدعم والحركة</b><span>بيسند الجسم وبيساعده يتحرك</span></li>
+<li data-s="4"><b>وظيفة ٢: الحماية</b><span>بيحمي الأعضاء الداخلية الحيوية</span></li>
+<li data-s="5"><b>الجمجمة</b><span>عظام قوية شكلها زي الخوذة ← بتحمي المخ</span></li>
+<li data-s="6"><b>القفص الصدري</b><span>مجموعة ضلوع ← بيحمي القلب والرئتين</span></li>
+<li data-s="7"><b>العمود الفقري</b><span>فقرات صغيرة متصلة ومصطفة رأسيًا في منتصف الظهر ← دعامة أساسية + مرونة وحركة في اتجاهات مختلفة</span></li>
+</ul></aside>
+</main>
+<script>
+var $=function(s){return document.querySelector(s)},sc=$('#scene'),up=$('#up');
+(function(){var v='',r='',i,y,w,d;
+for(i=0;i<15;i++){y=90+i*11;w=i<5?12:i<11?15:19;v+='<rect class="bn" x="'+(150-w/2)+'" y="'+y+'" width="'+w+'" height="8" rx="2.5"/>'}
+$('#vert').innerHTML=v;
+for(i=0;i<6;i++){y=108+i*12;w=34+10*Math.sin((i+.6)/6*Math.PI);d='M148 '+y+' C'+(150-w-10)+' '+(y-4)+' '+(150-w-12)+' '+(y+20)+' 148 '+(y+22);
+ r+='<path class="bo" d="'+d+'" stroke-width="7"/><path class="bf" d="'+d+'" stroke-width="4"/><g transform="translate(300,0) scale(-1,1)"><path class="bo" d="'+d+'" stroke-width="7"/><path class="bf" d="'+d+'" stroke-width="4"/></g>'}
+$('#rb').innerHTML=r})();
+function S(o){sc.dataset.x=o.x?1:0;sc.dataset.f=o.f||'';sc.dataset.o=o.o?1:0;sc.dataset.c=o.c?1:0;ang(o.a||0)}
+function ang(a){up.setAttribute('transform','rotate('+a+' 150 262)')}
+function qb(q,o,a,ok,no){return '<div class="qb" data-a="'+a+'" data-ok="'+ok+'" data-no="'+no+'"><div class="qt">'+q+'</div>'+o.map(function(t,i){return '<button class="opt" data-i="'+i+'">'+t+'</button>'}).join('')+'<div class="res"></div></div>'}
+function tog(box,a,b,on,off,m1,m0){var bt=box.querySelector('button'),ms=box.querySelector('.msg'),s=0;ms.textContent=m0;bt.onclick=function(){s=!s;S(s?on:off);bt.textContent=s?b:a;ms.textContent=s?m1:m0}}
+function pick(box,list){var ms=box.querySelector('.msg');box.querySelectorAll('button').forEach(function(b,i){b.onclick=function(){box.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');S(list[i][0]);ms.innerHTML=list[i][1]}})}
+var BN=['<svg viewBox="0 0 40 40"><g class="bn"><circle cx="9" cy="14" r="6"/><circle cx="9" cy="26" r="6"/><circle cx="31" cy="14" r="6"/><circle cx="31" cy="26" r="6"/><rect x="9" y="14" width="22" height="12"/></g></svg>','<svg viewBox="0 0 40 40"><ellipse class="bn" cx="20" cy="17" rx="14" ry="13"/><path class="bn" d="M12 24 H28 L26 34 H14Z"/><circle cx="14" cy="18" r="3.5" fill="#33505f"/><circle cx="26" cy="18" r="3.5" fill="#33505f"/></svg>','<svg viewBox="0 0 40 40"><path class="bo" d="M8 8 C38 8 38 34 10 34" stroke-width="8"/><path class="bf" d="M8 8 C38 8 38 34 10 34" stroke-width="5"/></svg>','<svg viewBox="0 0 40 40"><rect class="bn" x="5" y="14" width="30" height="14" rx="6"/><circle class="bn" cx="20" cy="10" r="5"/><circle cx="20" cy="22" r="3" fill="var(--tint)"/></svg>','<svg viewBox="0 0 40 40"><ellipse class="bn" cx="20" cy="27" rx="11" ry="9"/><path class="bo" d="M11 22 L8 6 M17 19 L16 4 M23 19 L24 4 M29 22 L32 8" stroke-width="6"/><path class="bf" d="M11 22 L8 6 M17 19 L16 4 M23 19 L24 4 M29 22 L32 8" stroke-width="3"/></svg>','<svg viewBox="0 0 40 40"><circle class="bn" cx="20" cy="20" r="12"/></svg>','<svg viewBox="0 0 40 40"><path class="bn" d="M4 10 C2 28 14 36 20 30 C26 36 38 28 36 10 C28 18 12 18 4 10Z"/></svg>'];
+function HERO(){var P=[[12,18],[88,14],[8,52],[92,54],[16,86],[84,88],[34,8],[66,92],[34,90],[68,8]],h='';
+P.forEach(function(p,i){h+='<div class="fb" style="--x:'+p[0]+'%;--y:'+p[1]+'%;--d:'+(.1+i*.12).toFixed(2)+'s;--t:'+(3+i%4*.7).toFixed(1)+'s;--w:'+(38+i%3*8)+'px">'+BN[i%BN.length]+'</div>'});
+return '<div class="hero2" role="img" aria-label="٢٠٦ عظمة">'+h+'<div class="big"><b>٢٠٦</b><span>عظمة</span></div></div>'}
+var DEF='<div class="def">',E='</div>';
+var ST=[
+{t:'لغز',h:'لو العظام اختفت؟',p:'ده طفل عادي زيك. جاوب الأول، وبعدين هنشوف اللي جواه.',st:{},b:['ده طفل عادي','إيه اللي جواه؟'],
+ demo:'<b>فكّر: إذا اختفت عظام جسم الإنسان، ماذا تتوقع أن يحدث؟</b>'+qb('اختار إجابتك',['الجسم هيفضل واقف زي ما هو','الجسم هيقع ومش هيقدر يقف ولا يتحرك','مفيش حاجة هتحصل'],1,'صح! من غير عظام مفيش حاجة تسند الجسم. دوس "التالي" ونشوف الهيكل.','لأ، فكّر: إيه اللي بيخلّي جسمك واقف وثابت؟')},
+{t:'الهيكل العظمي',h:'الهيكل العظمي',p:'جسم الإنسان البالغ بيتكوّن من حوالي <b>٢٠٦ عظمة</b> متصلة ببعضها. العظام دي لما تتجمّع بتدي الجسم شكله الكامل، واسم الهيكل ده <b>الهيكل العظمي</b>.',
+ d:HERO()+DEF+'<b>الهيكل العظمي:</b> البنية التي تتحد فيها العديد من العظام لتشكل الجسم بأكمله.'+E,
+ st:{x:1},b:['الهيكل العظمي','حوالي ٢٠٦ عظمة'],demo:'جرّب: دوس على أي جزء في الهيكل عشان تعرف اسمه.'},
+{t:'نظام حي',h:'نظام حي متكامل',p:'الهيكل العظمي مش مجرد عظام ساكنة. زي ما شفنا في الدرسين اللي فاتوا، هو <b>نظام حي متكامل</b> بيشتغل مع العضلات والمفاصل. دوس على كل واحد تشوف دوره:',
+ d:DEF+'يُعد الهيكل العظمي نظامًا حيًا متكاملًا يساعد الجسم على الدعم والحركة بالتعاون مع العضلات والمفاصل.'+E,
+ st:{x:1},b:['عظام + عضلات + مفاصل','شغل جماعي'],demo:'<button>العظام</button><button>العضلات</button><button>المفاصل</button><div class="msg">اختار واحد.</div>',
+ i:function(b){pick(b,[[{x:1},'<b>العظام:</b> صلبة وقوية، بتسند الجسم.'],[{x:1},'<b>العضلات:</b> بتشدّ العظام وبتحرّكها، لأنها بتتقبض وتنبسط.'],[{x:1},'<b>المفاصل:</b> بتربط العظام ببعض، وبتسمح لها تتثني بحرية.']])}},
+{t:'وظيفة الهيكل (١)',h:'بيسند الجسم ويساعده يتحرك',p:'أول وظيفة للهيكل العظمي: <b>الدعم والحركة</b>. العظام بتسند الجسم وبتخليه ثابت وقوي، والعضلات بتحرّكها. جرّب تشيل الهيكل وشوف:',
+ d:DEF+'<b>وظيفة الهيكل العظمي:</b> ١) يساعد الجسم على الدعم والحركة.'+E,
+ st:{x:1},b:['الدعم والحركة','العظام بتسند الجسم'],demo:'<button>شيل الهيكل العظمي</button><div class="msg"></div>',
+ i:function(b){tog(b,'شيل الهيكل العظمي','رجّع الهيكل العظمي',{c:1},{x:1},'من غير عظام، الجسم وقع ومبقاش يقدر يقف ولا يتحرك.','الجسم واقف ثابت بفضل الهيكل العظمي.')}},
+{t:'وظيفة الهيكل (٢)',h:'بيحمي الأعضاء المهمة',p:'تاني وظيفة: <b>حماية الأعضاء الداخلية الحيوية</b>، زي المخ والقلب والرئتين. العظام زي الدرع حوالين الأعضاء دي. دوس وشوف مين بيحمي مين:',
+ d:DEF+'<b>وظيفة الهيكل العظمي:</b> ٢) حماية الأعضاء الداخلية الحيوية.'+E,
+ st:{x:1},b:['الحماية','العظام زي الدرع'],demo:'<button>الجمجمة</button><button>القفص الصدري</button><div class="msg">اختار جزء.</div>',
+ i:function(b){pick(b,[[{x:1,f:'skull',o:1},'الجمجمة بتغطّي <b>المخ</b> وبتحميه.'],[{x:1,f:'ribs',o:1},'القفص الصدري بيحمي <b>القلب والرئتين</b>.']])}},
+{t:'الجمجمة',h:'الجمجمة: خوذة المخ',p:'الهيكل العظمي بيتكوّن من أجزاء، أولها <b>الجمجمة</b>. شكلها شبه الخوذة اللي بتحمي راسك لما تركب عجلة.',
+ d:DEF+'<b>الجمجمة:</b> تتكون من عظام قوية، تشبه الخوذة في شكلها.<br><b>وظيفتها:</b> حماية المخ.'+E,
+ st:{x:1,f:'skull'},b:['الجمجمة','بتحمي المخ'],demo:'<button>اكشف اللي جوّه الجمجمة</button><div class="msg"></div>',
+ i:function(b){tog(b,'اكشف اللي جوّه الجمجمة','قفّل الجمجمة',{x:1,f:'skull',o:1},{x:1,f:'skull'},'ده المخ جوّه الجمجمة، والعظام بتحميه من كل ناحية.','دوس عشان تشوف إيه اللي جوّه الجمجمة.')}},
+{t:'القفص الصدري',h:'القفص الصدري',p:'الضلوع مع بعض بيعملوا شكل قفص حوالين القلب والرئتين، فبيحميهم من أي خبطة.',
+ d:DEF+'<b>القفص الصدري:</b> يتكون من مجموعة ضلوع.<br><b>وظيفته:</b> حماية القلب والرئتين.'+E,
+ st:{x:1,f:'ribs'},b:['القفص الصدري','بيحمي القلب والرئتين'],demo:'<button>اكشف اللي جوّه القفص</button><div class="msg"></div>',
+ i:function(b){tog(b,'اكشف اللي جوّه القفص','قفّل القفص',{x:1,f:'ribs',o:1},{x:1,f:'ribs'},'القلب (الأحمر) والرئتين (الأزرق) جوّه القفص ومحميين بالضلوع.','دوس عشان تشوف إيه اللي جوّه القفص الصدري.')}},
+{t:'العمود الفقري',h:'العمود الفقري',p:'عمود طويل في منتصف الضهر، مصنوع من عظام صغيرة اسمها <b>فقرات</b>، متصلة ببعضها ومصطفّة رأسيًا. حرّك السلايدر وشوف الجسم بينحني إزاي:',
+ d:DEF+'<b>العمود الفقري:</b> يتكون من عظام صغيرة (فقرات) بارزة متصلة ببعضها، ومصطفة رأسيًا في منتصف الظهر.<br><b>وظيفته:</b> ١- يعمل كدعامة أساسية تحمل الجسم. ٢- يمنح الجسم المرونة ويساعدنا على الانحناء والحركة في اتجاهات مختلفة.'+E,
+ st:{x:1,f:'spine'},b:['العمود الفقري','دعامة + مرونة'],demo:'<input type="range" min="-35" max="35" value="0" aria-label="انحناء الجسم"><div class="msg">واقف مستقيم: العمود الفقري شايل الجسم كله.</div>',
+ i:function(b){var m=b.querySelector('.msg');b.querySelector('input').oninput=function(){var a=+this.value;ang(a);m.textContent=Math.abs(a)>8?'الجسم انحنى لأن العمود الفقري مرن، وفقراته بتتحرك في اتجاهات مختلفة.':'واقف مستقيم: العمود الفقري شايل الجسم كله.'}}},
+{t:'مراجعة',h:'وقت المراجعة',p:'قبل ما تبدأ: بصّ على الستيكي نوت مرة أخيرة، وبعدين اقفل عينيك واحكي كل فرع بكلامك. <span class="score" id="sc"></span>',
+ st:{x:1},b:['برافو!','راجع الخريطة وحل الأسئلة'],
+ demo:qb('١) عدد عظام جسم الإنسان البالغ تقريبًا:',['١٠٦','٢٠٦','٣٠٦'],1,'صح!','غلط، المعلومة: حوالي ٢٠٦ عظمة.')+
+ qb('٢) أي جزء بيحمي المخ؟',['الجمجمة','القفص الصدري','العمود الفقري'],0,'صح! الجمجمة شبه الخوذة.','غلط، الخوذة هي الجمجمة.')+
+ qb('٣) القلب والرئتين بيحميهم:',['الجمجمة','القفص الصدري','الفقرات'],1,'صح! الضلوع بتكوّن القفص الصدري.','غلط، فكّر في الضلوع.')+
+ qb('٤) العمود الفقري مكوّن من:',['ضلوع','فقرات','عظام الجمجمة'],1,'صح! فقرات صغيرة متصلة.','غلط، العمود الفقري عظامه الصغيرة اسمها فقرات.')+
+ qb('٥) أي وظيفة دي مش وظيفة العمود الفقري؟',['يحمل الجسم','يمنح الجسم المرونة','يحمي المخ'],2,'صح! المخ بتحميه الجمجمة.','غلط، دي وظيفة تانية لجزء تاني.')+
+ '<div class="qb"><div class="qt">٦) اشرح بكلامك: إيه وظيفتا الهيكل العظمي؟</div><textarea rows="2"></textarea><button id="mv">إجابة نموذجية</button><div class="res md" hidden>١) الدعم والحركة بالتعاون مع العضلات والمفاصل. ٢) حماية الأعضاء الداخلية الحيوية، زي المخ والقلب والرئتين.</div></div>',
+ i:function(b){b.querySelector('#mv').onclick=function(){this.nextElementSibling.hidden=false}}}
+];
+var cur=0,P=$('#panel');
+function sc_(){var s=$('#sc');if(s)s.textContent='إجاباتك الصح: '+P.querySelectorAll('.qb.done').length+' من ٥'}
+function render(n){cur=n;var s=ST[n];
+ P.innerHTML='<span class="tg">'+s.t+'</span><h2>'+s.h+'</h2><p>'+s.p+'</p>'+(s.d||'')+'<div class="demo">'+s.demo+'</div>';
+ S(s.st);$('#b1').textContent=s.b[0];$('#b2').textContent=s.b[1];
+ if(s.i)s.i(P.querySelector('.demo'));sc_();
+ document.querySelectorAll('#note li').forEach(function(l){var k=+l.dataset.s;l.classList.toggle('on',k<=n||n==8);l.classList.toggle('cur',k==n)});
+ $('#pv').hidden=n==0;$('#nx').hidden=n==ST.length-1}
+var busy=0;
+function show(n,dir){
+ if(dir&&busy)return;
+ if(!dir||matchMedia('(prefers-reduced-motion:reduce)').matches){render(n);if(dir)window.scrollTo(0,0);return}
+ busy=1;
+ var c=$('.panel'),L=$('.lesson'),k=c.cloneNode(true),a=dir>0?-1:1,X=function(v){return 'translateX('+v+'px)'};
+ k.removeAttribute('id');k.querySelectorAll('[id]').forEach(function(e){e.removeAttribute('id')});
+ k.setAttribute('aria-hidden','true');
+ k.style.cssText='position:absolute;left:'+c.offsetLeft+'px;top:'+c.offsetTop+'px;width:'+c.offsetWidth+'px;height:'+c.offsetHeight+'px;margin:0;z-index:6;pointer-events:none;will-change:transform,opacity,filter';
+ L.style.minHeight=L.offsetHeight+'px';
+ L.appendChild(k);
+ render(n);
+ window.scrollTo({top:0,behavior:'smooth'});
+ k.animate([
+  {transform:X(0),opacity:1,filter:'blur(0)'},
+  {transform:X(a*70),opacity:0,filter:'blur(7px)'}
+ ],{duration:300,easing:'cubic-bezier(.4,0,1,1)',fill:'forwards'}).onfinish=function(){k.remove()};
+ c.animate([
+  {transform:X(-a*70),opacity:0,filter:'blur(7px)'},
+  {transform:X(0),opacity:1,filter:'blur(0)'}
+ ],{duration:560,delay:120,easing:'cubic-bezier(.22,1,.48,1.04)',fill:'backwards'}).onfinish=function(){setTimeout(function(){L.style.minHeight='';busy=0},120)}
+}
+$('#pv').onclick=function(){if(cur>0)show(cur-1,-1)};$('#nx').onclick=function(){if(cur<ST.length-1)show(cur+1,1)};
+P.addEventListener('click',function(e){var b=e.target.closest('.opt');if(!b)return;var q=b.closest('.qb'),i=+b.dataset.i,ok=i==+q.dataset.a,r=q.querySelector('.res');
+ q.querySelectorAll('.opt').forEach(function(x){x.classList.remove('good','bad')});b.classList.add(ok?'good':'bad');
+ r.className='res '+(ok?'ok':'no');r.textContent=ok?q.dataset.ok:q.dataset.no;
+ if(ok&&cur==8)q.classList.add('done');sc_()});
+sc.addEventListener('click',function(e){var t=e.target.closest('[data-n]');if(t&&sc.dataset.x=='1'){$('#b1').textContent=t.dataset.n;$('#b2').textContent='جزء من الهيكل العظمي'}});
+show(0);
+</script>
+</body>
+</html>
