@@ -19,6 +19,11 @@ $('#grid').onclick=function(e){var b=e.target.closest('.card');if(!b)return;var 
  if(CH[i].open)location.hash='ch'+(i+1)+'-l1';
  else{b.classList.remove('shake');void b.offsetWidth;b.classList.add('shake');toast('الفصل '+ar(i+1)+' لسه مقفول، هيتفتح قريبًا')}};
 function load(src){var f=$('#fr');if(window.EMBED&&EMBED[src]){f.removeAttribute('src');f.srcdoc=new TextDecoder().decode(Uint8Array.from(atob(EMBED[src]),function(c){return c.charCodeAt(0)}))}else{f.removeAttribute('srcdoc');f.src=src}}
+function track(p,t,ev){var n=0;(function go(){if(window.goatcounter&&goatcounter.count)goatcounter.count({path:p,title:t,event:!!ev});else if(n++<20)setTimeout(go,300)})()}
+window.addEventListener('message',function(e){var d=e.data;
+ if(!d||d.type!=='lfx'||e.source!==$('#fr').contentWindow)return;
+ if(!/^ch\d+-l\d+$/.test(d.lesson)||(d.vote!=='up'&&d.vote!=='down'))return;
+ track('feedback/'+d.lesson+'/'+d.vote,'feedback '+d.lesson+' '+d.vote,true)});
 var tabsOpen=true;
 function setTabs(o){tabsOpen=o;var n=$('#tabs');n.classList.toggle('closed',!o);var t=n.querySelector('.tgl');if(t){t.setAttribute('aria-expanded',o);t.setAttribute('aria-label',o?'إخفاء الدروس':'عرض الدروس');t.title=o?'إخفاء الدروس':'عرض الدروس'}}
 function showChapter(i,l){var c=CH[i],s=$('#chapter');s.style.setProperty('--c',c.c);
@@ -27,9 +32,9 @@ function showChapter(i,l){var c=CH[i],s=$('#chapter');s.style.setProperty('--c',
  setTabs(tabsOpen);
  $('#tabs').onclick=function(e){if(e.target.closest('.tgl')){setTabs(!tabsOpen);return}var b=e.target.closest('.tab');if(b)location.hash='ch'+(i+1)+'-l'+(+b.dataset.k+1)};
  $('#home').hidden=true;$('.top').hidden=true;s.hidden=false;document.documentElement.style.overflow='hidden';
- var src=c.lessons[l].src;if($('#fr').dataset.s!=src){$('#fr').dataset.s=src;load(src)}window.scrollTo(0,0)}
+ var src=c.lessons[l].src;if($('#fr').dataset.s!=src){$('#fr').dataset.s=src;load(src);track('lesson/ch'+(i+1)+'-l'+(l+1),c.n+' - '+c.lessons[l].t)}window.scrollTo(0,0)}
 function route(){var m=/^ch(\d)(?:-l(\d))?$/.exec(location.hash.slice(1));
  if(m&&CH[m[1]-1]&&CH[m[1]-1].open&&CH[m[1]-1].lessons[(+m[2]||1)-1])showChapter(m[1]-1,(+m[2]||1)-1);
- else{document.documentElement.style.overflow='';$('#chapter').hidden=true;$('#home').hidden=false;$('.top').hidden=false;var f=$('#fr');f.dataset.s='';f.removeAttribute('src');f.removeAttribute('srcdoc')}}
+ else{document.documentElement.style.overflow='';$('#chapter').hidden=true;$('#home').hidden=false;$('.top').hidden=false;track('home','Home');var f=$('#fr');f.dataset.s='';f.removeAttribute('src');f.removeAttribute('srcdoc')}}
 $('#back').onclick=function(){setTabs(true);location.hash='home'};
 window.addEventListener('hashchange',route);route();
