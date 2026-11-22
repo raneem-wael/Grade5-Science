@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>الحيوانات ودرجة الحرارة | معمل الحيوان</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbfdf3;--card:#fff;--ink:#2a3a1e;--ink2:#667a55;--line:#d9e6bf;--navy:#dff0c2;--g:#6bb52f;--gD:#3f8a1c;--tint:#eef8d9;--sun:#ffd23f;--am:#f2b705;--lime:#a8cf45;--ol:#8a9a2b;--h1:#e1f3c4;--h2:#fff2b3;--grid:#ecf3da;--ok:#2e8b2e;--bad:#c0561f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#121a0c;--card:#1c2813;--ink:#eaf3dc;--ink2:#a9bd93;--line:#3a4d27;--navy:#0f1809;--g:#8bd04a;--gD:#b7e57f;--tint:#25351a;--h1:#1e3012;--h2:#3a3512;--grid:#1a2511;--ok:#7fd67f}}
+html{scroll-behavior:smooth}*{box-sizing:border-box}
+body{margin:0;background:var(--bg) linear-gradient(var(--grid) 1px,transparent 1px) 0 0/28px 28px;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);color:var(--ink);font-family:Cairo,Tahoma,sans-serif;line-height:1.9;font-size:18px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}main{max-width:800px;margin:0 auto;padding:0 16px}
+.hero{background:linear-gradient(135deg,var(--h1),var(--h2));padding:26px 0 30px;border-bottom:4px solid var(--g)}
+h1{font-size:clamp(2rem,7vw,2.7rem);font-weight:800;line-height:1.3;margin:8px 0}h2{font-size:1.45rem;font-weight:800;margin:4px 0 8px}h3{margin:0 0 4px}p{margin:6px 0}
+.lead{color:var(--ink2);font-size:1.08rem}
+.tg{display:inline-block;background:var(--sun);color:#3a2a00;font-weight:800;border-radius:8px;padding:0 12px;font-size:.9rem}
+.nav a{display:inline-block;margin:8px 0 0 8px;padding:4px 16px;border-radius:99px;background:var(--g);color:#10240a;font-weight:800;text-decoration:none}.nav a.o{background:none;color:var(--ink);border:2px solid var(--ink)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.pair div{padding:12px 14px;border-radius:14px;font-weight:600}
+.pair .y{background:var(--sun);color:#3a2a00}.pair .gr{background:var(--g);color:#0e2208}
+.blk{border-inline-start:6px solid var(--c,var(--g));padding:4px 18px 4px 0;margin:36px 0;display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:22px;align-items:start}
+.stk{position:sticky;top:16px;background:#fff59d;color:#3a3200;padding:16px 14px 12px;font-size:15px;line-height:1.8;border-radius:3px 3px 20px 3px;box-shadow:0 12px 18px -8px rgba(0,0,0,.35);transform:rotate(-1.6deg);margin-top:8px}
+.stk::before{content:"";position:absolute;top:-10px;left:50%;width:64px;height:18px;margin-left:-32px;background:rgba(255,255,255,.65);transform:rotate(2deg)}
+.stk b.h{display:block;margin-bottom:4px;font-size:14px}.stk ol,.stk ul{margin:2px 0;padding-inline-start:20px}
+.lab{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:max-content;max-width:92%;text-align:center;background:rgba(255,255,255,.95);color:#2a3a1e;border-radius:16px;padding:4px 20px;font-weight:800;font-size:clamp(1.15rem,4.2vw,1.55rem);line-height:1.6;box-shadow:0 6px 14px -6px rgba(0,0,0,.45)}.lab .badge{font-size:.8em;margin-inline-end:8px}
+.cmp{width:100%;border-collapse:collapse;font-size:13.5px;margin:4px 0}.cmp th,.cmp td{border:1px solid rgba(0,0,0,.22);padding:3px 6px;vertical-align:top;text-align:right}.cmp th{background:rgba(0,0,0,.09)}.cmp td:first-child{font-weight:800;white-space:nowrap}
+.blk{grid-template-columns:minmax(0,1fr);gap:10px}.stk{position:relative;top:0;transform:rotate(-.6deg);margin-top:4px;padding:18px 18px 14px;font-size:16px}.cmp{font-size:15px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin:14px 0}
+.hv{border:2px dashed var(--g);background:var(--tint)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+.def{border-radius:12px;padding:12px 14px;background:var(--tint)}.def b.t{display:block;font-size:1.1rem}
+.tag{display:inline-block;background:var(--sun);color:#2b2100;font-weight:800;border-radius:8px;padding:0 10px;font-size:.95rem}
+.w{font-style:normal;color:var(--gD);font-weight:800;font-size:.88em}
+.why{color:var(--ink2);font-size:.97rem}.msg{min-height:3.4em;margin-top:8px;font-weight:600}
+button{font-family:inherit;font-size:1rem;font-weight:600;border:2px solid var(--ink);background:var(--card);color:var(--ink);border-radius:99px;padding:5px 18px;cursor:pointer;margin:4px 3px}
+button.on{background:var(--g);border-color:var(--g);color:#10240a}button:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.c{text-align:center}
+.scene{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line)}.scene svg{display:block;width:100%}.scene .bg{position:absolute;inset:0;height:100%}
+.sunr{transform-origin:330px 52px;animation:spin 24s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.sn{animation:fall linear infinite}@keyframes fall{from{transform:translateY(0)}to{transform:translateY(300px)}}
+.track{direction:ltr;position:relative;height:16px;border-radius:99px;margin:30px 20px 10px;touch-action:none;cursor:pointer;background:linear-gradient(to left,#ffd23f,#a8cf45 50%,#c9d6c0 70%,#8fb0a0)}
+.knob{position:absolute;top:50%;width:40px;height:40px;margin:-20px -20px 0 0;border-radius:50%;background:#fff;border:4px solid var(--gD);display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 6px 12px -4px rgba(0,0,0,.4);cursor:grab}
+.dot{position:absolute;top:50%;width:10px;height:10px;margin:-5px -5px 0 0;border-radius:50%;background:#fff}
+.ends{display:flex;justify-content:space-between;direction:ltr;font-weight:800;font-size:.9rem;margin:0 6px}
+.badge{display:inline-block;border-radius:99px;padding:0 12px;font-weight:800;font-size:.9rem}.bh{background:var(--sun);color:#3a2a00}.bc{background:#c9dcc3;color:#1d3a24}
+.wave{display:block;width:100%;height:60px;margin-top:50px}
+.band{background:var(--navy);padding:10px 0 70px;margin-top:-1px}.band h2{font-size:1.9rem}
+.score{display:inline-block;background:var(--card);border:2px solid var(--g);border-radius:99px;padding:2px 18px;font-weight:800}
+.qq{background:var(--card);border-radius:14px;padding:12px 16px;margin:10px 0}.qq .t{font-weight:700}
+.opt{display:block;width:100%;text-align:right;border-radius:12px;margin:5px 0}.opt.good{background:var(--ok);border-color:var(--ok);color:#fff}.opt.bad{background:var(--bad);border-color:var(--bad);color:#fff}
+.zones{display:grid;gap:10px}.z2{grid-template-columns:1fr 1fr}.z3{grid-template-columns:1fr 1fr}
+.zn{min-height:62px;border:2px dashed var(--ink2);border-radius:14px;padding:6px 8px;display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start;background:var(--card)}.zn>small{width:100%;font-weight:800}
+.zn.h{background:#fff2b3;color:#3a2a00}.zn.cd{background:#dbe9d4;color:#1d3a24}
+.chip{touch-action:none;user-select:none;cursor:grab;background:var(--sun);color:#2b2100;border-radius:12px;padding:2px 12px;font-weight:700;font-size:.95rem;position:relative;box-shadow:0 3px 8px -4px rgba(0,0,0,.5)}
+.chip.d{z-index:9;cursor:grabbing}.chip.ok{background:var(--ok);color:#fff;cursor:default}.chip.sh{animation:sh .4s 2}@keyframes sh{25%{left:8px}75%{left:-8px}}
+.tray{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0;min-height:36px}
+.sd{transform-box:fill-box;transform-origin:center;transition:transform .6s,fill .6s}
+.meter{height:16px;border-radius:99px;background:var(--line);overflow:hidden;margin:6px 0}.meter i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#f2b705,#6bb52f)}.vs{touch-action:none;user-select:none;display:block;width:100%;direction:ltr}.g1{display:grid;grid-template-columns:minmax(0,1fr) 165px;gap:12px}.side{display:flex;flex-direction:column;gap:8px}.pc{background:var(--tint);border-radius:14px;padding:6px 8px;text-align:center;font-size:.95rem}.pc svg{width:100%;height:84px;display:block}.pc small{display:block;font-weight:700;color:var(--ink2)}@media(max-width:700px){.g1{grid-template-columns:1fr}.side{flex-direction:row}.pc{flex:1}}.vs.dr{cursor:grab}
+</style></head><body>
+<header class="hero"><div class="wrap">
+<span class="tg">معمل الحيوان | الدرس الثاني</span>
+<h1>الحيوانات ودرجة الحرارة<br>مين بينشط ومين بيستخبّى؟</h1>
+<p class="lead">حرّك، اسحب، جرّب... وافهم الحيوان بيعمل إيه في الصيف والشتا.</p>
+<div class="nav"><a href="#learn">الشرح</a><a href="#practice" class="o">التدريبات</a></div>
+<div class="pair"><div class="y">☀️ الصيف: نشاط وحركة وتكاثر</div><div class="gr">❄️ الشتا: حركة بطيئة وسكون، أو بيات، أو هجرة</div></div>
+</div></header>
+
+<main id="learn">
+<section class="blk"><div class="bd"><span class="tg">فكّر</span><h2>مين بيتحرك بسرعة؟</h2>
+<p>الكتير من الحيوانات زي الثعابين بتنشط وتتحرك بسرعة في فصل .......</p><div id="think" class="box hv"></div></div>
+<aside class="stk"><b class="h">📌 ملخص الجزء</b>ينشط كثير من الحيوانات، مثل الثعابين، وتتحرك بسرعة في فصل الصيف.</aside></section>
+
+<section class="blk" style="--c:var(--am)"><div class="bd"><span class="tg">اعرف</span><h2>الحرارة بتحرّك الحيوانات 🦎</h2>
+<p>نشاط بعض الحيوانات زي <b>السحالي</b> والثعابين والضفادع بيتغير جدًا حسب درجة الحرارة. يعني سلوكها بيختلف من فصل لفصل.</p>
+<h3 style="margin-top:12px">🎮 لعبة: حرّك الشمس</h3>
+<p>اسحب الشمس بإيدك: <b>بعيد عن السحابة = صيف ☀️</b>، و<b>ورا السحابة = شتا ❄️</b>. وراقب الضفدع والسحلية والثعبان وهم بيدوّروا على الأكل 🪰. كل واحد بيدوّر في منطقته.</p>
+<div class="box"><div class="g1"><div><div class="scene" id="sc1"><svg class="vs dr" id="v1" viewBox="0 0 400 270"></svg></div><div class="msg" id="m1"></div></div>
+<div class="side"><div class="pc"><svg id="pf" viewBox="0 0 140 110"></svg><b>الضفدع</b><small>النشاط</small><div class="meter"><i id="af"></i></div></div><div class="pc"><svg id="pz" viewBox="0 0 140 110"></svg><b>السحلية</b><small>النشاط</small><div class="meter"><i id="az"></i></div></div><div class="pc"><svg id="ps" viewBox="0 0 140 110"></svg><b>الثعبان</b><small>النشاط</small><div class="meter"><i id="as"></i></div></div></div></div></div>
+<div class="two"><div class="def" style="background:#fff2b3;color:#3a2a00"><b class="t">☀️ حرارة عالية (الصيف)</b>١) نشاطها بيزيد.<br>٢) بتتحرك بسرعة تدوّر على الأكل أو تهرب من الخطر.<br>٣) بعض الحيوانات بتنمو وتتكاثر <i class="w">(يعني تخلّف وتزيد)</i> في الفصول الدافية.</div>
+<div class="def" style="background:#dbe9d4;color:#1d3a24"><b class="t">❄️ حرارة واطية (الشتا)</b>١) نشاطها بيقل.<br>٢) حركتها بتبقى بطيئة ومش بتتحرك كتير في الجو البارد.<br>٣) بتفضل ساكنة <i class="w">(ثابتة)</i> في التربة أو في شقوق <i class="w">(فتحات ضيقة)</i> الصخور.</div></div></div>
+<aside class="stk"><b class="h">📌 ملخص الجزء</b>يتغير نشاط بعض الحيوانات، مثل السحالي والثعابين والضفادع، بشكل كبير حسب درجة الحرارة.
+<table class="cmp"><tr><th></th><th>☀️ الصيف<br>(ارتفاع الحرارة)</th><th>❄️ الشتاء<br>(انخفاض الحرارة)</th></tr><tr><td>النشاط</td><td>يزداد نشاط الحيوانات</td><td>يقل نشاط الحيوانات</td></tr><tr><td>الحركة</td><td>تتحرك بسرعة للبحث عن الطعام أو الهروب من الخطر</td><td>تصبح حركتها بطيئة ولا تتحرك كثيرًا خلال الطقس البارد</td></tr><tr><td>النمو والسكون</td><td>تنمو وتتكاثر بعض الحيوانات خلال الفصول الدافئة</td><td>تبقى ساكنة في التربة أو في شقوق الصخور</td></tr></table></aside></section>
+
+<section class="blk" style="--c:var(--lime)"><div class="bd"><span class="tg">① البيات الشتوي</span><h2>نوم الشتا 😴</h2>
+<p>لما الجو يبرد في الشتا، الحيوانات بتتصرف بطرق مختلفة. أول طريقة اسمها <b>البيات الشتوي</b>.</p>
+<div class="def"><b>البيات الشتوي (يعني نوم الشتا):</b> إن الحيوان يفضل ساكن في التربة أو في شقوق الصخور، عشان يوفّر طاقته <i class="w">(قوّته)</i> ويفضل <i class="w">على قيد الحياة (عايش)</i> طول الشتا البارد.</div>
+<h3>🧩 جرّب: ساعد السحلية</h3>
+<p>اسحب السحلية لشق الصخرة وراقب مؤشر الطاقة:</p>
+<div class="box"><div class="scene" id="sc2"><svg class="vs dr" id="v2" viewBox="0 0 400 220"></svg></div>
+<b>الطاقة:</b><div class="meter"><i id="en"></i></div><div class="msg" id="m2"></div><div class="c"><button id="r2">🔄 من الأول</button></div></div>
+<div class="box hv"><h3>ليه بتفضل ساكنة؟ <i class="w">(علّل)</i></h3><p>عشان تحافظ على طاقتها لما درجة الحرارة تقل في الشتا.</p></div></div>
+<aside class="stk"><b class="h">📌 ملخص الجزء</b><b>البيات الشتوي:</b> بقاء بعض الحيوانات ساكنة في التربة أو في شقوق الصخور لتوفير طاقتها والبقاء على قيد الحياة خلال فصل الشتاء البارد.<br><b>علّل:</b> تبقى بعض الحيوانات ساكنة في التربة أو في شقوق الصخور خلال فصل الشتاء؛ للحفاظ على طاقتها عند انخفاض درجة الحرارة.</aside></section>
+
+<section class="blk" style="--c:var(--sun)"><div class="bd"><span class="tg">② الهجرة</span><h2>السفر لمكان أدفا ✈️</h2>
+<p>مش كل الحيوانات بتستخبى تحت الأرض في الشتا. بعضها بيروح <i class="w">(بيلجأ)</i> لمكان تاني أدفا، وده اسمه <b>الهجرة</b>.</p>
+<div class="def"><b>الهجرة:</b> انتقال الحيوانات حسب الفصل <i class="w">(موسميًا)</i> من المناطق الباردة لمناطق أدفا، عشان تتكاثر وتفضل عايشة.</div>
+<h3>🧩 جرّب: سافر مع الطيور</h3>
+<p>اسحب قطيع الفلامنجو من المنطقة الباردة لمصر:</p>
+<div class="box"><div class="g1"><div><div class="scene" id="sc3"><svg class="vs dr" id="v3" viewBox="0 0 400 220"></svg></div><div class="msg" id="m3"></div></div>
+<div class="side"><div class="pc"><svg id="pfl" viewBox="0 0 140 110"></svg><b>الفلامنجو</b><small>بيهاجر لمصر في الشتا</small></div><div class="pc"><svg id="pdk" viewBox="0 0 140 110"></svg><b>البط</b><small>بيهاجر لمصر في الشتا</small></div></div></div></div>
+<div class="box"><b>مثال: طيور الفلامنجو <i class="w">(الطيور الوردي طويلة الرجلين)</i> والبط</b><p>بتهاجر لمصر عشان تقضي فصل الشتا في جو دافي.</p></div>
+<div class="def">💡 <b>ملحوظة مهمة:</b> مصر في الشتا مش بتبقى حر زي الصيف، لكنها <b>أدفا</b> من المناطق الباردة اللي الطيور بتسيبها. عشان كده بتروحلها: الحرارة هناك أنسب ليها.</div>
+<div class="box hv"><h3>❓ ماذا يحدث عند...</h3><p>لو درجة الحرارة قلّت، طيور الفلامنجو والبط بتعمل إيه؟</p><button onclick="this.nextElementSibling.hidden=false;this.hidden=true">شوف الإجابة</button><p hidden><b>بتهاجر لمناطق أدفا عشان تتكاثر وتفضل عايشة.</b></p></div></div>
+<aside class="stk"><b class="h">📌 ملخص الجزء</b><b>الهجرة:</b> انتقال الحيوانات موسميًا من المناطق الباردة إلى مناطق أكثر دفئًا للتكاثر والبقاء على قيد الحياة.<br><b>مثال:</b> تهاجر طيور الفلامنجو والبط إلى مصر لقضاء فصل الشتاء في جو دافئ.<br><b>ماذا يحدث عند انخفاض درجة الحرارة بالنسبة لطيور الفلامنجو والبط؟</b> تهاجر إلى مناطق أكثر دفئًا للتكاثر والبقاء على قيد الحياة.</aside></section>
+
+<section class="blk" style="--c:var(--ol)"><div class="bd"><span class="tg">تأثير الحرارة</span><h2>الإنسان ولا السحلية؟ 🏃</h2>
+<p>الإنسان بيقدر يجري ويتحرك حتى لما الجو يبقى بارد. لكن السحالي بتتأثر بالحرارة وبتقف عن الحركة. اسحب وشوف:</p>
+<div class="box"><div class="scene" id="sc4"><svg class="vs" id="v4" viewBox="0 0 400 210"></svg></div><div class="track" id="tk4"></div>
+<div class="ends"><span>❄️ جو بارد</span><span>☀️ جو دافي</span></div><div class="msg" id="m4"></div></div>
+<div class="box hv"><h3>ليه السحلية بتقف؟ <i class="w">(علّل)</i></h3><p>لأنها بتعتمد على الجو اللي حواليها <i class="w">(البيئة الخارجية)</i> عشان تدفّي جسمها وتظبط درجة حرارته، وبعدها تقدر تتحرك.</p></div></div>
+<aside class="stk"><b class="h">📌 ملخص الجزء</b>يستطيع الإنسان الجري والحركة عندما يكون الجو باردًا، بينما تتأثر السحالي بدرجة الحرارة وتتوقف عن الحركة.<br><b>علّل:</b> لأنها تعتمد على البيئة الخارجية لتدفئة جسمها وضبط درجة حرارتها لتستطيع الحركة.</aside></section>
+
+<section class="blk" style="--c:var(--g)"><div class="bd"><span class="tg">مثال</span><h2>السحلية في الصيف وفي الشتا 🦎</h2>
+<p>دوس على الفصل وشوف السحلية بتعمل إيه:</p>
+<div class="c"><button id="b5s" class="on">☀️ الصيف</button><button id="b5w">❄️ الشتا</button></div>
+<div class="box"><div class="scene" id="sc5"><svg class="vs" id="v5" viewBox="0 0 400 230"></svg></div><div class="msg" id="m5"></div></div></div>
+<aside class="stk"><b class="h">📌 ملخص الجزء</b><b>سلوك السحلية في فصل الصيف وفصل الشتاء:</b>
+<table class="cmp"><tr><th></th><th>☀️ الصيف</th><th>❄️ الشتاء</th></tr><tr><td>السلوك</td><td>تستلقي بهدوء تام تحت أشعة الشمس المباشرة فوق صخرة ساخنة</td><td>تختبئ في التربة وبين شقوق الصخور</td></tr><tr><td>علّل</td><td>لتدفئة جسمها وضبط درجة حرارتها</td><td>للحفاظ على طاقتها</td></tr></table></aside></section>
+</main>
+
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0 30 Q180 0 360 30 T720 30 T1080 30 T1440 30 V60 H0Z" fill="var(--navy)"/></svg>
+<section class="band" id="practice"><div class="wrap">
+<h2>📝 وقت التدريبات</h2><p class="lead">جاوب بنفسك، وبعدها هتشوف ليه الإجابة صح.</p>
+<div class="score" id="score"></div>
+<div style="margin:12px 0"><button id="t1" class="on">تدريب ١: اختار</button><button id="t2">تدريب ٢: صيف ولا شتا؟</button><button id="t3">تدريب ٣: بيات ولا هجرة؟</button></div>
+<div id="s1"></div>
+<div id="s2" hidden><p><b>اسحب كل جملة للفصل بتاعها:</b></p><div class="zones z2"><div class="zn h" data-k="h"><small>☀️ الصيف</small></div><div class="zn cd" data-k="c"><small>❄️ الشتا</small></div></div><div class="tray" id="tr2"></div></div>
+<div id="s3" hidden><p><b>اسحب كل جملة للطريقة بتاعتها:</b></p><div class="zones z2"><div class="zn cd" data-k="b"><small>😴 البيات الشتوي</small></div><div class="zn h" data-k="m"><small>✈️ الهجرة</small></div></div><div class="tray" id="tr3"></div></div>
+<div class="qq c" style="margin-top:26px"><b>الدرس فادك؟</b><br><button onclick="fb(this,'up')">👍</button><button onclick="fb(this,'down')">👎</button><div id="fbm"></div></div>
+</div></section>
+
+<script>
+const $=i=>document.getElementById(i),mix=(a,b,t)=>a+(b-a)*t,rgb=(a,b,t)=>a.map((v,i)=>Math.round(mix(v,b[i],t))),hx=(a,b,t)=>'rgb('+rgb(a,b,t).join()+')';
+const tk=[];(function L(){tk.forEach(f=>f());requestAnimationFrame(L)})();
+function slider(el,steps,cb,icon){el.innerHTML='<div class="knob">'+icon+'</div>';let f=0,dg=0;const kn=el.firstChild;
+ for(let i=0;i<steps;i++){const d=document.createElement('div');d.className='dot';d.style.right=(i/(steps-1)*100)+'%';el.insertBefore(d,kn)}
+ const set=v=>{f=v;kn.style.right=(f*100)+'%';cb(f,kn)},mv=e=>{const r=el.getBoundingClientRect();set(Math.max(0,Math.min(1,(r.right-e.clientX)/r.width)))};
+ el.onpointerdown=e=>{dg=1;el.setPointerCapture(e.pointerId);mv(e)};el.onpointermove=e=>dg&&mv(e);el.onpointerup=()=>{dg=0;if(steps)set(Math.round(f*(steps-1))/(steps-1))};set(0)}
+
+const liz=(x,y,s,d,ph,sl,col='#5fae3a')=>{const l=(a,b)=>`<path d="M${a},6 l${7*Math.sin(b)},13" stroke="${col}" stroke-width="4.5" stroke-linecap="round" fill="none"/>`;
+ return `<g transform="translate(${x},${y}) scale(${s*d},${s})"><path d="M-30,0 C-52,6 -62,-10 -84,-3" stroke="${col}" stroke-width="7" stroke-linecap="round" fill="none"/>${l(-18,ph)}${l(-18,ph+Math.PI)}<ellipse rx="34" ry="11" fill="${col}"/><path d="M-22,-8 q22,-6 44,0" stroke="#3c7d24" stroke-width="3" fill="none" opacity=".6"/>${l(20,ph+Math.PI)}${l(20,ph)}<ellipse cx="38" cy="-2" rx="15" ry="9" fill="${col}"/><circle cx="44" cy="-5" r="2.4" fill="#222"/>${sl?'<text x="26" y="-20" font-size="17" font-weight="800" fill="#2f6f91">z z z</text>':''}</g>`};
+const man=(x,y,ph,d)=>`<g transform="translate(${x},${y}) scale(${d},1)"><circle cy="-34" r="8" fill="#e0a96d"/><path d="M0,-26 L0,0 M0,-20 l${10*Math.sin(ph)},10 M0,-20 l${-10*Math.sin(ph)},10 M0,0 l${12*Math.sin(ph)},22 M0,0 l${-12*Math.sin(ph)},22" stroke="#2f6f91" stroke-width="5" stroke-linecap="round" fill="none"/></g>`;
+const sunS=(x,y,o)=>`<g opacity="${o}"><circle cx="${x}" cy="${y}" r="26" fill="#ffc83d"/><circle cx="${x}" cy="${y}" r="38" fill="none" stroke="#ffc83d" stroke-width="5" stroke-dasharray="7 11"/></g>`;
+const snowS=o=>`<g opacity="${o}">${[...Array(12)].map((_,i)=>`<circle cx="${(i*37+15)%400}" cy="${(i*53+20)%150}" r="${2+i%3}" fill="#fff"/>`).join('')}</g>`;
+const grass=y=>`<rect y="${y}" width="400" height="60" fill="#8a5a34"/>`+[...Array(9)].map((_,i)=>`<path d="M${20+i*45},${y+1} l-5,-13 l5,6 l2,-11 l3,11 l5,-7 l-4,14z" fill="#6fa83a"/>`).join('');
+const sky=(el,c)=>el.style.background=hx([255,247,204],[222,234,218],c);
+const bnd=(t,a)=>t>.66?a[0]:t>.33?a[1]:a[2];
+// D1
+let sun={x:90,y:62},dr1=0,tt=1,fc=0,ph1=0,pp=0,b1=-1;const foods=[];
+const LN=[[160,180],[204,224],[246,262]];
+const fr={x:90,y:172,d:1,hp:0,tg:0,tx:0,ty:0},lz={x:110,y:214,d:1,p:0},SN=[...Array(15)].map((_,i)=>({x:330-i*8,y:254}));
+const v1=$('v1'),cov=()=>Math.hypot(sun.x-255,sun.y-55)<34;
+const pt1=e=>{const r=v1.getBoundingClientRect();return[(e.clientX-r.left)/r.width*400,(e.clientY-r.top)/r.height*270]};
+const mvSun=e=>{const[X,Y]=pt1(e);sun.x=Math.max(30,Math.min(370,X));sun.y=Math.max(30,Math.min(100,Y))};
+v1.onpointerdown=e=>{const[X,Y]=pt1(e);if(Y<125){dr1=1;v1.setPointerCapture(e.pointerId);mvSun(e)}};v1.onpointermove=e=>dr1&&mvSun(e);v1.onpointerup=()=>dr1=0;
+const frogS=(x,y,hop,d,tg,tx,ty)=>`<ellipse cx="${x}" cy="${y+4}" rx="${24-hop*.6}" ry="6" fill="#000" opacity=".18"/><g transform="translate(${x},${y-hop}) scale(${d},1)"><ellipse cx="-18" cy="-6" rx="13" ry="8" transform="rotate(-20 -18 -6)" fill="#4aa22c"/><path d="M-26,2 l-9,3 M-22,3 l-9,-1" stroke="#4aa22c" stroke-width="4" stroke-linecap="round"/><ellipse cy="-14" rx="24" ry="15" fill="#5fb83a"/><ellipse cx="4" cy="-9" rx="15" ry="8" fill="#c9ec8f"/><circle cx="-6" cy="-20" r="3" fill="#3f8f27" opacity=".6"/><circle cx="-14" cy="-12" r="2.5" fill="#3f8f27" opacity=".6"/><path d="M12,-6 l4,10 l8,0" stroke="#4aa22c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><ellipse cx="20" cy="-22" rx="15" ry="11" fill="#6cc646"/><circle cx="26" cy="-32" r="6" fill="#fff"/><circle cx="14" cy="-33" r="5.5" fill="#fff"/><circle cx="28" cy="-32" r="3" fill="#111"/><circle cx="16" cy="-33" r="2.8" fill="#111"/><path d="M13,-17 q12,6 24,0" stroke="#2d6a1d" stroke-width="2.5" fill="none" stroke-linecap="round"/>${tg>.05?`<path d="M35,-18 L${35+tx*tg},${-18+ty*tg}" stroke="#e8467c" stroke-width="3.5" stroke-linecap="round"/><circle cx="${35+tx*tg}" cy="${-18+ty*tg}" r="3.5" fill="#e8467c"/>`:''}</g>`;
+const frogP=(k,ph)=>{const lid=Math.max((1-k)*.6,Math.sin(ph*.7)>.96?1:0),br=Math.sin(ph*(1+k*1.5));
+ const eye=(cx,id)=>`<clipPath id="${id}"><circle cx="${cx}" cy="38" r="16"/></clipPath><circle cx="${cx}" cy="38" r="16" fill="#fff"/><circle cx="${cx+3}" cy="40" r="7.5" fill="#111"/><circle cx="${cx+6}" cy="37" r="2.4" fill="#fff"/><rect x="${cx-16}" y="22" width="32" height="${32*lid}" fill="#6cc646" clip-path="url(#${id})"/>`;
+ return `<ellipse cx="70" cy="72" rx="52" ry="34" fill="#6cc646"/><ellipse cx="70" cy="96" rx="${22+3*br}" ry="${8+2*br}" fill="#c9ec8f"/>${eye(44,'ce1')}${eye(96,'ce2')}<circle cx="64" cy="64" r="1.8" fill="#2d6a1d"/><circle cx="76" cy="64" r="1.8" fill="#2d6a1d"/><path d="M34,82 Q70,${86+22*k} 106,82" stroke="#2d6a1d" stroke-width="3.5" fill="none" stroke-linecap="round"/><circle cx="22" cy="68" r="4" fill="#4aa22c" opacity=".7"/><circle cx="118" cy="68" r="4" fill="#4aa22c" opacity=".7"/>`};
+const lizP=(k,ph)=>{const L=Math.max((1-k)*.7,Math.sin(ph*.7)>.96?1:0),br=Math.sin(ph*(1+k*1.5));
+ const eye=(cx,id)=>`<clipPath id="${id}"><circle cx="${cx}" cy="46" r="10"/></clipPath><circle cx="${cx}" cy="46" r="10" fill="#f6c453"/><circle cx="${cx}" cy="46" r="5" fill="#111"/><circle cx="${cx+2}" cy="44" r="1.6" fill="#fff"/><rect x="${cx-10}" y="36" width="20" height="${20*L}" fill="#5fae3a" clip-path="url(#${id})"/>`;
+ return `<path d="M20,70 Q20,32 70,30 Q120,32 120,70 Q120,92 70,94 Q20,92 20,70Z" fill="#5fae3a"/><ellipse cx="70" cy="94" rx="${20+2*br}" ry="${6+1.5*br}" fill="#b9dc86"/>${eye(46,'le1')}${eye(94,'le2')}<circle cx="66" cy="62" r="1.8" fill="#2f6f1a"/><circle cx="74" cy="62" r="1.8" fill="#2f6f1a"/><path d="M40,78 Q70,${82+10*k} 100,78" stroke="#2f6f1a" stroke-width="3" fill="none" stroke-linecap="round"/>${[[50,66],[90,66],[70,46],[58,54],[82,54]].map(q=>`<circle cx="${q[0]}" cy="${q[1]}" r="2" fill="#3f8f27" opacity=".5"/>`).join('')}`};
+const snakeP=(k,ph)=>{const lid=(1-k)*.75,tg=Math.sin(ph*1.6)>.55,len=6+12*k;
+ const eye=(cx,id)=>`<clipPath id="${id}"><circle cx="${cx}" cy="46" r="9"/></clipPath><circle cx="${cx}" cy="46" r="9" fill="#ffd23f"/><ellipse cx="${cx}" cy="46" rx="2.4" ry="7" fill="#111"/><rect x="${cx-9}" y="37" width="18" height="${18*lid}" fill="#86b83d" clip-path="url(#${id})"/>`;
+ return `<ellipse cx="70" cy="58" rx="46" ry="32" fill="#86b83d"/><ellipse cx="70" cy="58" rx="46" ry="32" fill="none" stroke="#3f6b1c" stroke-width="4" stroke-dasharray="3 9"/>${eye(50,'se1')}${eye(90,'se2')}<circle cx="64" cy="64" r="1.8" fill="#3f6b1c"/><circle cx="76" cy="64" r="1.8" fill="#3f6b1c"/><path d="M44,76 Q70,84 96,76" stroke="#3f6b1c" stroke-width="3" fill="none" stroke-linecap="round"/>${tg?`<path d="M70,82 L70,${82+len} l-5,6 M70,${82+len} l5,6" stroke="#e8467c" stroke-width="3" fill="none" stroke-linecap="round"/>`:''}`};
+const msgs1=['☀️ <b>الشمس طالعة = صيف:</b> الجو دافي، والضفدع والسحلية والثعبان نشيطين وبيتحركوا بسرعة يدوّروا على الأكل.','🌥️ <b>الحرارة بتتغير:</b> حركتهم بتتغير معاها.','☁️ <b>الشمس ورا السحابة = شتا:</b> الجو برد، وحركتهم بطيئة ومش بيلحقوا يدوّروا على الأكل.'];
+const nr=(o,ln)=>{let b=null,bd=1e9;foods.forEach(f=>{if(f.ln!=ln)return;const d=Math.hypot(f.x-o.x,f.y-o.y);if(d<bd){bd=d;b=f}});return[b,bd]};
+tk.push(()=>{fc++;ph1+=.2;tt+=((cov()?.04:1)-tt)*.03;const t=tt,k=.08+.92*Math.max(0,t-.12)/.88;pp+=.03*(.4+.6*k);
+ LN.forEach((l,i)=>{if(!foods.some(f=>f.ln==i)&&fc%(110+i*25)==0)foods.push({ln:i,x:50+Math.random()*300,y:l[0]+Math.random()*(l[1]-l[0]),p:Math.random()*6})});
+ const rm=f=>{const i=foods.indexOf(f);if(i>=0)foods.splice(i,1)};
+ let[f1,d1]=nr(fr,0);if(f1){const mv=Math.abs(Math.sin(fr.hp));fr.hp+=k*.11;const sp=3.8*k*mv;fr.x+=(f1.x-fr.x)/d1*sp;fr.y=Math.max(LN[0][0]+2,Math.min(LN[0][1],fr.y+(f1.y-fr.y)/d1*sp*.5));fr.d=f1.x>fr.x?1:-1;
+  if(d1<20){fr.tg=1;fr.tx=(f1.x-fr.x)*fr.d;fr.ty=f1.y-fr.y+16;rm(f1)}}
+ fr.tg=Math.max(0,fr.tg-.06);
+ let[f3,d3]=nr(lz,1);if(f3){const sp=3.4*k;lz.x+=(f3.x-lz.x)/d3*Math.min(sp,d3);lz.y=Math.max(LN[1][0],Math.min(LN[1][1],lz.y+(f3.y-lz.y)/d3*sp*.5));lz.d=f3.x>lz.x?1:-1;lz.p+=sp*.14;if(d3<16)rm(f3)}
+ let[f2,d2]=nr(SN[0],2),wig=0;if(f2){wig=Math.min(1,k*1.3);const sp=2.8*k;SN[0].x=Math.max(20,Math.min(380,SN[0].x+(f2.x-SN[0].x)/d2*sp));SN[0].y=Math.max(LN[2][0],Math.min(LN[2][1],SN[0].y+(f2.y-SN[0].y)/d2*sp*.5));if(d2<14)rm(f2)}
+ for(let i=1;i<15;i++){const a=SN[i-1],b=SN[i],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d>8){b.x=a.x-dx/d*8;b.y=a.y-dy/d*8}}
+ const P=SN.map((q,i)=>{const a=SN[Math.max(0,i-1)],b=SN[Math.min(14,i+1)],dx=a.x-b.x,dy=a.y-b.y,dl=Math.hypot(dx,dy)||1,o=Math.sin(ph1*1.4-i*.8)*3*wig;return[q.x-dy/dl*o,q.y+dx/dl*o]}),dd='M'+P.map(q=>q[0].toFixed(1)+','+q[1].toFixed(1)).join(' L'),ang=Math.atan2(P[0][1]-P[2][1],P[0][0]-P[2][0])*180/Math.PI,tf=Math.sin(ph1*2.2)>.4;
+ const cl=hx([255,255,255],[190,198,208],1-t),cc=(x,y,rx,ry)=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${cl}"/>`;
+ sky($('sc1'),1-t);
+ $('v1').innerHTML=snowS(Math.max(0,(.7-t)/.7))+sunS(sun.x,sun.y,1)+`<circle cx="${sun.x}" cy="${sun.y}" r="${44+4*Math.sin(ph1)}" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="3 6" opacity="${dr1?0:.8}"/>`+cc(255,55,55,24)+cc(225,63,38,20)+cc(288,63,40,20)+cc(255,41,36,22)+grass(128)+'<rect y="188" width="400" height="90" fill="#8a5a34"/><rect y="188" width="400" height="44" fill="#fff" opacity=".07"/><path d="M0,188 H400 M0,232 H400" stroke="#5a381d" stroke-width="2" stroke-dasharray="6 9" opacity=".55"/>'
+ +foods.map(f=>`<g transform="translate(${f.x},${f.y+Math.sin(ph1+f.p)*3})"><ellipse cx="-4" cy="-4" rx="4.5" ry="2.5" fill="#cfe3f5" opacity=".85"/><ellipse cx="4" cy="-4" rx="4.5" ry="2.5" fill="#cfe3f5" opacity=".85"/><ellipse rx="4" ry="3" fill="#222"/></g>`).join('')
+ +frogS(fr.x,fr.y,Math.abs(Math.sin(fr.hp))*16*(f1?1:0),fr.d,fr.tg,fr.tx,fr.ty)
+ +liz(lz.x,lz.y,.72,lz.d,lz.p,0)
+ +`<path d="${dd}" stroke="#86b83d" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="${dd}" stroke="#3f6b1c" stroke-width="5" stroke-dasharray="4 10" stroke-linejoin="round" fill="none" opacity=".75"/><g transform="translate(${P[0][0]},${P[0][1]}) rotate(${ang})"><ellipse rx="13" ry="9" fill="#86b83d"/><circle cx="4" cy="-4.5" r="3" fill="#ffd23f"/><circle cx="4" cy="4.5" r="3" fill="#ffd23f"/><circle cx="4.6" cy="-4.5" r="1.3" fill="#111"/><circle cx="4.6" cy="4.5" r="1.3" fill="#111"/>${tf?'<path d="M12,0 l9,0 l4,-3 M21,0 l4,3" stroke="#e8467c" stroke-width="2" fill="none" stroke-linecap="round"/>':''}</g>`;
+ $('pf').innerHTML=frogP(k,pp);$('pz').innerHTML=lizP(k,pp);$('ps').innerHTML=snakeP(k,pp);['af','az','as'].forEach(i=>$(i).style.width=Math.round(k*100)+'%');
+ const bb=t>.66?0:t>.33?1:2;if(bb!=b1){b1=bb;$('m1').innerHTML=msgs1[bb]}});
+// D2
+let lx=70,ly=168,inn=0,en=100,dr2=0;const v2=$('v2');
+function r2(){sky($('sc2'),1);v2.innerHTML=snowS(1)+grass(180)+`<ellipse cx="300" cy="150" rx="82" ry="56" fill="#a8a595"/><ellipse cx="350" cy="168" rx="40" ry="30" fill="#938f80"/><ellipse cx="252" cy="172" rx="34" ry="24" fill="#b6b3a3"/><ellipse cx="300" cy="158" rx="40" ry="20" fill="#3a3328"/>`+liz(lx,ly,inn?.7:1,1,0,inn)}
+function m2(){$('m2').innerHTML=inn?'✅ <b>اتخبّت وسكنت:</b> بتوفّر طاقتها وتفضل عايشة طول الشتا. ده <b>البيات الشتوي</b>.':en<35?'⚠️ طاقتها بتقل بسرعة! دخّلها شق الصخرة.':'🥶 الجو برد والسحلية برّه وبتصرف طاقتها. اسحبها لشق الصخرة 👉'}
+const pt2=e=>{const r=v2.getBoundingClientRect();return[(e.clientX-r.left)/r.width*400,(e.clientY-r.top)/r.height*220]};
+v2.onpointerdown=e=>{if(inn)return;const[X,Y]=pt2(e);if(Math.hypot(X-lx,Y-ly)<65){dr2=1;v2.setPointerCapture(e.pointerId)}};
+v2.onpointermove=e=>{if(!dr2)return;const[X,Y]=pt2(e);lx=Math.max(40,Math.min(360,X));ly=Math.max(60,Math.min(190,Y));r2()};
+v2.onpointerup=()=>{if(!dr2)return;dr2=0;if(Math.hypot(lx-300,ly-158)<60){inn=1;lx=300;ly=158}r2();m2()};
+$('r2').onclick=()=>{lx=70;ly=168;inn=0;en=100;r2();m2()};
+tk.push(()=>{en=inn?Math.max(0,en-.004):Math.max(22,en-.05);$('en').style.width=en+'%'; if(!inn&&Math.round(en)%5==0)m2()});r2();m2();
+// D3
+let bx=70,by=100,ph3=0,dr3=0;const v3=$('v3');
+tk.push(()=>{ph3+=.22;const w=Math.sin(ph3),ar=Math.max(0,Math.min(1,(bx-60)/260));
+ const b=[[0,0],[-26,14],[26,14],[-52,28],[52,28]].map(p=>`<g transform="translate(${bx+p[0]},${by+p[1]})"><path d="M-14,0 Q-7,${-10*w-2} 0,0 Q7,${-10*w-2} 14,0" stroke="#e8467c" stroke-width="3.5" fill="none" stroke-linecap="round"/><circle r="3.5" cy="2" fill="#f48fb1"/></g>`).join('');
+ v3.innerHTML=`<defs><linearGradient id="gm" x1="0" x2="1"><stop offset="0" stop-color="#d3e2ee"/><stop offset=".5" stop-color="#e9efd6"/><stop offset="1" stop-color="#fff0a8"/></linearGradient></defs><rect width="400" height="220" fill="url(#gm)"/>${snowS(1-ar)}${sunS(340,45,ar)}<rect y="185" width="400" height="35" fill="#8a5a34" opacity=".85"/><rect x="8" y="190" width="118" height="26" rx="13" fill="#fff" opacity=".94"/><g transform="translate(26,207) scale(.9)"><path d="M0,10 C-8,-2 -10,-6 -10,-10 A10,10 0 0 1 10,-10 C10,-6 8,-2 0,10Z" fill="#e53935"/><circle cy="-10" r="3.8" fill="#fff"/></g><text x="44" y="208" font-size="14" font-weight="800" fill="#2a3a1e">منطقة باردة</text><rect x="326" y="190" width="66" height="26" rx="13" fill="#fff" opacity=".94"/><g transform="translate(374,207) scale(.9)"><path d="M0,10 C-8,-2 -10,-6 -10,-10 A10,10 0 0 1 10,-10 C10,-6 8,-2 0,10Z" fill="#e53935"/><circle cy="-10" r="3.8" fill="#fff"/></g><text x="360" y="208" font-size="14" font-weight="800" fill="#2a3a1e" text-anchor="end">مصر</text><path d="M80,150 Q200,120 320,150" stroke="#2a3a1e" stroke-width="2" stroke-dasharray="4 7" fill="none" opacity=".5"/>${b}`;
+ $('m3').innerHTML=ar>.9?'🎉 <b>وصلوا مصر!</b> حتى في الشتا، مصر <b>أدفا</b> من المنطقة الباردة، فيتكاثروا فيها ويفضلوا عايشين.':ar>.3?'🌤️ الجو بيدفّى كل ما بتقرّب من مصر...':'🥶 الجو برد عندهم. اسحب القطيع ناحية مصر 👉'});
+const pt3=e=>{const r=v3.getBoundingClientRect();return[(e.clientX-r.left)/r.width*400,(e.clientY-r.top)/r.height*220]};
+v3.onpointerdown=e=>{const[X,Y]=pt3(e);if(Math.hypot(X-bx,Y-by-14)<90){dr3=1;v3.setPointerCapture(e.pointerId)}};
+v3.onpointermove=e=>{if(!dr3)return;const[X,Y]=pt3(e);bx=Math.max(70,Math.min(330,X));by=Math.max(40,Math.min(150,Y))};v3.onpointerup=()=>dr3=0;
+// bird portraits
+const wv=(y,ph,rip)=>{const w=(o,c,a,k)=>`<path d="M-80,${y+o} q10,-${k} 20,0${' t20,0'.repeat(12)} V112 H-80Z" fill="${c}" opacity="${a}" transform="translate(${(ph*(o?9:6))%40},0)"/>`;return w(0,'#8fd6f2',.85,3)+rip+w(3,'#3f9bd1',.55,4)+`<path d="M-80,${y} q10,-3 20,0${' t20,0'.repeat(12)}" fill="none" stroke="#fff" stroke-width="1.3" opacity=".7" transform="translate(${(ph*6)%40},0)"/>`};
+const flam=ph=>{const bl=Math.sin(ph*.5)>.96;return `<path d="M12,102 q-3,-30 2,-52 M22,102 q3,-26 -1,-46" stroke="#5e8f3a" stroke-width="2.5" fill="none"/><ellipse cx="14" cy="47" rx="3" ry="8" fill="#7a4a2a"/><g transform="translate(0,${2*Math.sin(ph*1.2)})"><path d="M60,66 L60,100" stroke="#e8467c" stroke-width="3.5" stroke-linecap="round"/><path d="M70,66 L78,82 L68,84" stroke="#e8467c" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M28,50 Q16,44 14,54 Q22,57 34,58Z" fill="#ee6e98"/><ellipse cx="60" cy="52" rx="32" ry="19" fill="#f68fb0"/><path d="M38,50 Q58,72 82,54 Q60,58 38,50Z" fill="#ee6e98"/><g transform="rotate(${3*Math.sin(ph*.9)} 82 46)"><path d="M82,46 C100,44 104,30 92,24 C84,18 94,10 104,12" stroke="#f68fb0" stroke-width="9" fill="none" stroke-linecap="round"/><circle cx="104" cy="12" r="7.5" fill="#f68fb0"/><path d="M109,9 Q121,9 119,21 Q113,15 108,15Z" fill="#fbd5cf" stroke="#e7b3ad" stroke-width=".6"/><path d="M118,15 Q120,21 116,21Z" fill="#333"/>${bl?'<path d="M100,10 q3,2 6,0" stroke="#222" stroke-width="1.5" fill="none"/>':'<circle cx="104" cy="10" r="1.8" fill="#222"/>'}<circle cx="100" cy="14" r="2.6" fill="#ff7aa5" opacity=".7"/></g></g>${wv(84,ph,[0,8].map(d=>{const r=(ph*5+d)%16;return `<ellipse cx="60" cy="84" rx="${r+4}" ry="${(r+4)*.28}" fill="none" stroke="#fff" stroke-width="1.5" opacity="${1-r/16}"/>`}).join(''))}`};
+const duck=ph=>{const bl=Math.sin(ph*.5+1)>.96,o=Math.max(0,Math.sin(ph*.8)-.55)*6,fl=Math.max(0,Math.sin(ph*.7))*-8;return `<g transform="translate(0,${2.5*Math.sin(ph*1.3)})"><path d="M30,64 Q14,54 20,46 Q30,52 38,60Z" fill="#ffd23f"/><ellipse cx="62" cy="70" rx="36" ry="22" fill="#ffd23f"/><ellipse cx="58" cy="70" rx="20" ry="11" fill="#f5b800" transform="rotate(${fl} 46 68)"/><g transform="rotate(${3*Math.sin(ph*.8)} 96 56)"><circle cx="96" cy="40" r="19" fill="#ffd23f"/><circle cx="91" cy="47" r="4.2" fill="#ff9a8a" opacity=".6"/>${bl?'<path d="M97,36 q4,2 8,0" stroke="#222" stroke-width="2" fill="none"/>':'<circle cx="101" cy="36" r="3.4" fill="#222"/><circle cx="102.2" cy="34.8" r="1.1" fill="#fff"/>'}<path d="M111,40 Q129,38 127,44 Q119,46 111,45Z" fill="#ff8a1f"/><path d="M111,${46+o} Q123,${47+o} 125,${49+o} Q118,${53+o} 111,${49+o}Z" fill="#f57a0a"/></g></g>${wv(80,ph+1,[0,9].map(d=>{const r=(ph*4+d)%18;return `<ellipse cx="62" cy="82" rx="${38+r}" ry="${(38+r)*.16}" fill="none" stroke="#fff" stroke-width="1.5" opacity="${1-r/18}"/>`}).join(''))}<ellipse cx="120" cy="90" rx="13" ry="4" fill="#4aa22c"/><path d="M120,90 L128,88" stroke="#2f7a1c" stroke-width="1.2"/>`};
+let pq=0;tk.push(()=>{pq+=.035;$('pfl').innerHTML=flam(pq);$('pdk').innerHTML=duck(pq)});
+// D4
+let t4=1,hx4=60,hd=1,hp=0,zx=200,zd=1,zp=0;sky($('sc4'),0);
+slider($('tk4'),0,(f,kn)=>{t4=1-f;kn.textContent=t4>.5?'☀️':'❄️';sky($('sc4'),f);$('m4').innerHTML=bnd(t4,['☀️ الجو دافي: الإنسان والسحلية الاتنين بيتحركوا.','🌥️ الجو بيبرد: الإنسان زي ما هو، والسحلية بدأت تبطّأ.','🥶 <b>الجو بارد:</b> الإنسان لسه بيجري، لكن السحلية <b>وقفت!</b>'])},'☀️');
+tk.push(()=>{hx4+=2.6*hd;if(hx4>340)hd=-1;if(hx4<60)hd=1;hp+=.3;const sp=Math.max(0,t4-.12)*4.4;zx+=sp*zd;if(zx>330)zd=-1;if(zx<100)zd=1;zp+=sp*.13;
+ $('v4').innerHTML=sunS(350,32,Math.max(0,(t4-.3)/.7))+snowS(Math.max(0,(.6-t4)/.6))+`<rect y="112" width="400" height="6" fill="#8a5a34"/><rect y="188" width="400" height="22" fill="#8a5a34"/><text x="10" y="22" font-size="16" font-weight="800" fill="#2a3a1e">الإنسان</text><text x="10" y="134" font-size="16" font-weight="800" fill="#2a3a1e">السحلية</text>`+man(hx4,90,hp,hd)+liz(zx,172,.9,zd,zp,0)});
+// D5
+const v5=$('v5');v5.innerHTML=`<g id="s5s"></g><g id="s5w"></g><rect y="190" width="400" height="40" fill="#8a5a34"/><ellipse cx="260" cy="165" rx="95" ry="55" fill="#a8a595"/><ellipse cx="260" cy="130" rx="60" ry="14" fill="#b88a5a" id="hr"/><ellipse cx="270" cy="186" rx="36" ry="17" fill="#3a3328"/><ellipse cx="350" cy="190" rx="38" ry="26" fill="#938f80"/><g id="lz5" style="transition:transform .9s ease;transform:translate(255px,114px)">${liz(0,0,.9,1,0,0)}</g>`;
+$('s5s').innerHTML=sunS(70,55,1)+`<g stroke="#ff9a3c" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"><path d="M215,100 q8,-8 0,-16 t0,-16"/><path d="M255,100 q8,-8 0,-16 t0,-16"/><path d="M295,100 q8,-8 0,-16 t0,-16"/></g>`;
+$('s5w').innerHTML=snowS(1);$('s5w').style.cssText='opacity:0;transition:opacity .8s';$('s5s').style.cssText='transition:opacity .8s';
+function s5(w){$('b5s').classList.toggle('on',!w);$('b5w').classList.toggle('on',w);$('sc5').style.transition='background .8s';sky($('sc5'),w);$('s5s').style.opacity=w?0:1;$('s5w').style.opacity=w?1:0;$('hr').setAttribute('fill',w?'#a8a595':'#d9803a');
+ $('lz5').style.transform=w?'translate(268px,188px) scale(.8)':'translate(255px,114px)';
+ $('m5').innerHTML=w?'❄️ <b>الشتا:</b> السحلية بتستخبى في التربة وبين شقوق الصخور. <br><b>ليه؟</b> عشان تحافظ على طاقتها.':'☀️ <b>الصيف:</b> السحلية بتستلقي <i class="w">(تتمدد)</i> بهدوء تحت أشعة الشمس المباشرة <i class="w">(الشمس الواضحة من غير حاجز)</i> فوق صخرة ساخنة. <br><b>ليه؟</b> عشان تدفّي جسمها وتظبط درجة حرارته.'}
+$('b5s').onclick=()=>s5(0);$('b5w').onclick=()=>s5(1);s5(0);
+// quiz
+let pts=0;const TOT=18;const upd=()=>$('score').textContent='النتيجة: '+pts+' / '+TOT;upd();
+function mk(el,q,o,why,cb){const idx=o.map((_,i)=>i).sort(()=>Math.random()-.5);el.innerHTML='<div class="t">'+q+'</div>';idx.forEach(i=>{const b=document.createElement('button');b.className='opt';b.textContent=o[i];b.onclick=()=>{if(el.dataset.d)return;el.dataset.d=1;b.classList.add(i?'bad':'good');[...el.querySelectorAll('.opt')].find(x=>x.textContent==o[0]).classList.add('good');const w=document.createElement('p');w.className='why';w.textContent=(i?'مش دقيق. ':'صح! ')+why;el.appendChild(w);cb&&cb(!i)};el.appendChild(b)})}
+mk($('think'),'الثعابين بتنشط وتتحرك بسرعة في فصل:',['الصيف','الشتا'],'الحرارة العالية بتزوّد نشاط الحيوانات.');
+[['السحلية في الجو البارد حركتها بتبقى:',['بطيئة','سريعة'],'البرد بيقلل نشاط الحيوانات.'],['البيات الشتوي معناه:',['الحيوان يفضل ساكن في التربة أو شقوق الصخور عشان يوفّر طاقته','الحيوان ينتقل لمكان أدفا'],'البيات سكون وتوفير طاقة، أما الانتقال فاسمه الهجرة.'],['الهجرة معناها:',['انتقال الحيوانات حسب الفصل من مناطق باردة لمناطق أدفا','بقاء الحيوانات ساكنة تحت الأرض'],'الهجرة سفر لمكان أدفا عشان التكاثر والبقاء.'],['ليه بتهاجر طيور الفلامنجو والبط لمصر؟',['عشان تقضي الشتا في جو دافي','عشان تلاقي جو أبرد'],'مصر دافية في الشتا، فمناسبة لها.'],['ليه السحلية بتستلقي على صخرة ساخنة في الصيف؟',['عشان تدفّي جسمها وتظبط حرارته','عشان بتنام'],'السحلية بتعتمد على الجو حواليها عشان تدفّي جسمها.'],['ليه السحلية بتستخبى بين الصخور في الشتا؟',['عشان تحافظ على طاقتها','عشان تجري بسرعة أكتر'],'السكون بيوفّر الطاقة لما الجو يبرد.']].forEach(q=>{const d=document.createElement('div');d.className='qq';$('s1').appendChild(d);mk(d,q[0],q[1],q[2],ok=>{if(ok){pts++;upd()}})});
+function drag(c,host){let sx,sy,on=0;c.onpointerdown=e=>{if(c.classList.contains('ok'))return;on=1;sx=e.clientX;sy=e.clientY;c.setPointerCapture(e.pointerId);c.classList.add('d')};
+ c.onpointermove=e=>{if(on)c.style.transform=`translate(${e.clientX-sx}px,${e.clientY-sy}px)`};
+ c.onpointerup=e=>{if(!on)return;on=0;c.classList.remove('d');c.style.transform='';const z=[...host.querySelectorAll('.zn')].find(z=>{const r=z.getBoundingClientRect();return e.clientX>r.left&&e.clientX<r.right&&e.clientY>r.top&&e.clientY<r.bottom});
+  if(z&&z.dataset.k==c.dataset.z&&!(z.dataset.cap&&z.querySelector('.chip'))){z.appendChild(c);c.classList.add('ok');pts++;upd()}else if(z){c.classList.add('sh');setTimeout(()=>c.classList.remove('sh'),800)}}}
+const mkc=(tr,host,t,z)=>{const c=document.createElement('div');c.className='chip';c.textContent=t;c.dataset.z=z;tr.appendChild(c);drag(c,host)};
+[['نشاطها بيزيد','h'],['بتتحرك بسرعة','h'],['بتنمو وتتكاثر','h'],['نشاطها بيقل','c'],['حركتها بطيئة','c'],['بتفضل ساكنة في التربة','c']].sort(()=>Math.random()-.5).forEach(x=>mkc($('tr2'),$('s2'),x[0],x[1]));
+[['بتفضل ساكنة في شق صخرة','b'],['بتنتقل لمكان أدفأ','m'],['الفلامنجو والبط','m'],['بتوفّر طاقتها','b'],['بتسافر حسب الفصل','m'],['بتستخبى في التربة','b']].sort(()=>Math.random()-.5).forEach(x=>mkc($('tr3'),$('s3'),x[0],x[1]));
+[['t1','s1'],['t2','s2'],['t3','s3']].forEach(a=>$(a[0]).onclick=()=>{['1','2','3'].forEach(n=>{$('s'+n).hidden=a[1]!='s'+n;$('t'+n).classList.toggle('on',a[0]=='t'+n)})});
+function fb(b,v){[...b.parentNode.querySelectorAll('button')].forEach(c=>c.classList.remove('on'));b.classList.add('on');$('fbm').textContent='شكرًا ❤️';try{window.goatcounter&&goatcounter.count({path:'lesson-seasons-'+v,title:'feedback '+v,event:true})}catch(e){}}
+</script></body></html>

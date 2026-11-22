@@ -1,6 +1,6 @@
-var CH=[
-    { n: 'العظام والعضلات', c: '#ef6f5e', ic: 'i1', open: 1, lessons: [{ t: 'العظام والعضلات', src: 'lessons/ch1/lesson1.html' }, { t: 'تركيب العظام', src: 'lessons/ch1/lesson2.html' }, { t: 'الهيكل العظمي الكامل للإنسان', src: 'lessons/ch1/lesson3.html' }, { t: 'أجسام الحيوانات', src: 'lessons/ch1/lesson4.html' }]},
- {n:'التغيرات في الفصول',c:'#f4b73f',ic:'i2'},
+var CH = [
+    { n: 'العظام والعضلات', c: '#ef6f5e', ic: 'i1', open: 1, lessons: [{ t: 'العظام والعضلات', src: 'lessons/ch1/lesson1.html' }, { t: 'تركيب العظام', src: 'lessons/ch1/lesson2.html' }, { t: 'الهيكل العظمي الكامل للإنسان', src: 'lessons/ch1/lesson3.html' }, { t: 'أجسام الحيوانات', src: 'lessons/ch1/lesson4.html' }] },
+    { n: 'التغيرات في الفصول', c: '#f4b73f', ic: 'i2', open: 1, lessons: [{ t: 'التغيرات خلال السنة', src: 'lessons/ch2/lesson1.html' }, { t: 'الحيوانات و درجة الحرارة', src: 'lessons/ch2/lesson2.html' }, ] },
  {n:'شروط الإنبات',c:'#8cc63f',ic:'i3'},
  {n:'شروط النمو',c:'#2fb583',ic:'i4'},
  {n:'من الزهرة إلى الثمرة',c:'#ec6fa4',ic:'i5'},

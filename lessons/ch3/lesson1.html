@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ما بداخل البذرة | معمل العلوم</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>:root{--bg:#f9fcf5;--card:#fff;--ink:#1f3d2b;--ink2:#587566;--line:#d6e6cc;--grid:#e8f2de;--acc:#8cc63f;--accd:#4f8a14;--stage:#f1f9e6;--sun:#ffc83d;--red:#e8584f;--ok:#1a9a55;--tint:#edf7de;--h1:#e3f5c8;--h2:#fff1c6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1a12;--card:#13271b;--ink:#e6f2e9;--ink2:#9db8a6;--line:#2b4a36;--grid:#112218;--acc:#9bd84a;--accd:#9bd84a;--stage:#16301f;--tint:#183324;--h1:#16301f;--h2:#24401a;--ok:#5fd18d;--red:#ef6a5e}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background-color:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;color:var(--ink);font-family:Cairo,Tahoma,sans-serif;line-height:1.9;font-size:18px}
+.hero{background:linear-gradient(135deg,var(--h1),var(--h2));padding:8px 14px;border-bottom:4px solid var(--acc);display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap}
+.hero h1{font-size:1.35rem;margin:0;font-weight:800}
+.tg{display:inline-block;background:var(--sun);color:#3a2a00;font-weight:800;border-radius:8px;padding:0 12px;font-size:.9rem}
+.lesson{max-width:1040px;margin:0 auto;padding:14px 14px 40px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:18px;align-items:start}
+.stagebox{position:sticky;top:10px}
+.stage{position:relative;aspect-ratio:1;border:3px solid var(--line);border-radius:22px;overflow:hidden;background:var(--stage)}
+.stage svg{position:absolute;inset:0;width:100%;height:100%}
+#ov{pointer-events:none}
+.panel{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:16px 18px}
+.panel h2{font-size:1.45rem;font-weight:800;margin:4px 0 6px;line-height:1.5}.panel p{margin:6px 0}
+.def{background:var(--tint);border-radius:12px;padding:8px 14px;margin:10px 0;border-inline-start:5px solid var(--acc);font-size:.98rem}
+.demo{margin-top:12px;border-top:2px dashed var(--line);padding-top:10px}.demo:empty{display:none}
+button{font-family:inherit;font-size:1rem;font-weight:600;border:2px solid var(--ink);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 16px;cursor:pointer;margin:4px 3px}
+button:hover:not(:disabled){background:var(--tint)}button.on{background:var(--ink);color:var(--bg)}button:disabled{opacity:.4;cursor:not-allowed}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.opt{display:block;width:100%;text-align:right;border-radius:12px;margin:5px 0}
+.good{background:var(--ok)!important;border-color:var(--ok)!important;color:#fff!important}.bad{background:var(--red)!important;border-color:var(--red)!important;color:#fff!important}
+.res{margin-top:6px;font-size:.98rem}.res.ok{color:var(--ok);font-weight:700}.res.no{color:var(--red);font-weight:700}.res.md{background:var(--tint);border-radius:10px;padding:6px 12px}
+.in{font-family:inherit;font-size:1rem;border:2px solid var(--line);border-radius:10px;padding:0 10px;width:8.5em;background:var(--bg);color:var(--ink);margin:0 4px}
+textarea{width:100%;font-family:inherit;font-size:1rem;border:2px solid var(--line);border-radius:10px;padding:6px 10px;background:var(--bg);color:var(--ink);margin-top:6px}
+input[type=range]{width:100%;accent-color:var(--accd)}
+.qq{border:2px solid var(--line);border-radius:14px;padding:8px 12px;margin:8px 0}
+.cp{touch-action:none;cursor:grab}.cp.on{background:var(--ink);color:var(--bg)}
+.steps{position:relative;padding-inline-start:32px}
+.steps::before{content:"";position:absolute;inset-inline-start:11px;top:30px;bottom:30px;width:4px;background:var(--line);border-radius:2px}
+.step{position:relative;min-height:74vh;display:flex;align-items:center;padding:14px 0}
+.step .node{position:absolute;inset-inline-start:-32px;top:50%;width:26px;height:26px;margin-top:-13px;border-radius:50%;background:var(--card);border:4px solid var(--line);transition:all .3s;z-index:1}
+.step.dn .node{border-color:var(--acc)}.step.on .node{background:var(--acc);border-color:var(--acc);transform:scale(1.25)}
+.step .panel{width:100%;opacity:.5;transition:opacity .4s,box-shadow .4s,border-color .4s}
+.step.on .panel{opacity:1;border-color:var(--acc);box-shadow:0 8px 0 -3px color-mix(in srgb,var(--acc) 45%,transparent)}
+.sn{display:flex;justify-content:space-between;gap:8px;margin-top:14px;border-top:2px dashed var(--line);padding-top:10px}
+.sn button{background:var(--acc);border-color:var(--acc);color:#1c3a00;font-weight:800;padding:4px 22px}.sn button.g{background:var(--card);color:var(--ink);border-color:var(--ink)}
+#prog{position:fixed;top:0;inset-inline:0;height:5px;z-index:40}#prog i{display:block;height:100%;width:0;background:var(--acc);border-radius:0 3px 3px 0;transition:width .15s}
+.sum{max-width:760px;margin:0 auto 60px;padding:0 16px}
+.note{background:#fff7b8;color:#3a3200;border-radius:6px 6px 22px 6px;padding:18px 24px 22px;box-shadow:0 10px 0 -4px rgba(120,100,0,.18);transform:rotate(-1deg);border-top:14px solid #f3dc5b}
+.note h2{margin:0 0 6px;font-size:1.5rem}.note li{margin:4px 0}.note b{color:#4a6e00}
+@keyframes pl{50%{transform:scale(1.3);opacity:.4}}.pulse{animation:pl 1.2s infinite;transform-box:fill-box;transform-origin:center}
+.bub rect,.bub circle{fill:var(--card);stroke:var(--ink2);stroke-width:3}.bub text{fill:var(--ink);font-family:Cairo,sans-serif}.b1{font-size:25px;font-weight:800}.b2{font-size:21px}
+#ov .bub{transition:opacity .4s}
+.sw{display:inline-block;width:20px;height:20px;border-radius:50%;vertical-align:middle;margin-inline-end:6px;border:2px solid var(--ink2)}
+@media(max-width:780px){.lesson{grid-template-columns:1fr;padding-top:6px}.stagebox{top:0;margin:0 -14px;padding:8px 14px 10px;z-index:20;background-color:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;border-bottom:4px solid var(--acc);box-shadow:0 10px 16px -8px rgba(31,61,43,.35)}.stage{width:min(100%,42vh);margin:0 auto}.step{min-height:50vh}.steps{padding-inline-start:28px}.step .node{inset-inline-start:-28px;width:22px;height:22px;margin-top:-11px}body{font-size:17px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<div id="prog"><i></i></div>
+<header class="hero"><span class="tg">الفصل ٣: شروط الإنبات | الدرس ١</span><h1>ما بداخل البذرة</h1></header>
+<main class="lesson"><div class="stagebox"><div class="stage"><svg id="scene" viewBox="90 140 580 580" role="img" aria-label="بذرة الفاصوليا"></svg><svg id="ov" viewBox="0 0 760 760" aria-hidden="true"></svg></div></div><div class="steps" id="steps"></div></main>
+<section class="sum"><aside class="note"><h2>الملخص</h2><ul>
+<li>البذرة محاطة بـ<b>غلاف البذرة (القشرة)</b> وبداخلها جزءان أساسيان: <b>الجنين</b> و<b>الفلقتان</b>.</li>
+<li><b>الجنين</b> هو النبتة الصغيرة، وينمو عند توافر الظروف المناسبة.</li>
+<li><b>الفلقتان</b> هما الجزء الأكبر وتختزنان الغذاء (النشا) اللازم للإنبات.</li>
+<li><b>الإنبات:</b> خروج النبتة الصغيرة من البذرة وبدء نموها.</li>
+<li><b>محلول اليود</b> بني مصفر ويتحول إلى أزرق داكن مع وجود النشا.</li>
+<li>النشا أكبر في البذرة غير المنبتة وتقل كميته بعد الإنبات لأن النبتة الصغيرة تستهلك جزءًا منه.</li>
+<li>تختلف البذور في حجمها وشكلها، لكنها تحتوي جميعًا على جنين وعناصر غذائية تساعدها على الإنبات.</li></ul></aside></section>
+<script>var $=function(s){return document.querySelector(s)};
+var IOD='#d9972b',DB='#1d2b7a',LB='#6c84cf',CAM={sC:{x:90,y:140,w:580},sO:{x:20,y:70,w:720},emb:{x:460,y:235,w:200},cmp:{x:0,y:170,w:760},germ:{x:30,y:200,w:700}};
+var BEAN='M170 380 C165 290 250 240 360 238 C470 236 590 280 590 370 C590 450 520 480 460 470 C420 462 400 440 360 445 C320 450 280 495 230 480 C190 468 172 430 170 380Z';
+var BL='M380 237 C340 237 255 248 212 295 C172 340 168 430 228 478 C275 497 322 452 380 444Z',BR='M380 237 C470 236 590 280 590 370 C590 450 520 480 460 470 C425 463 405 446 380 444Z';
+function hx(c){return[parseInt(c.substr(1,2),16),parseInt(c.substr(3,2),16),parseInt(c.substr(5,2),16)]}
+function mix(a,b,t){a=hx(a);b=hx(b);return 'rgb('+a.map(function(v,i){return Math.round(v+(b[i]-v)*t)}).join(',')+')'}
+function cl(x){return Math.max(0,Math.min(1,x))}
+function T0(){return{sc:'seed',coat:1,open:0,soak:0,lens:0,g:0,showB:0,A:{r:0,t:0,f:DB},B:{r:0,t:0,f:LB},C:{r:0,t:0,f:DB},D:{r:0,t:0,f:IOD}}}
+var P=T0(),cam={x:90,y:140,w:580},CUR=null,cur=-1,raf=0,ready={};
+/* ---------- scene ---------- */
+function SCN(){
+ var ins=function(cx,cy){return 'translate('+cx+' '+cy+') scale(.86) translate('+(-cx)+' '+(-cy)+')'};
+ var emb='<g id="emb" transform="translate(452 352) scale(.62)"><path d="M-4 4 C-10 24 -6 44 6 56 C16 44 14 22 6 4Z" fill="#cfe58a" stroke="#6e9a2a" stroke-width="3"/><path d="M-4 4 C-26 -10 -30 -40 -12 -58 C4 -44 6 -20 -4 4Z" fill="#6fb53a" stroke="#3f7a1a" stroke-width="3"/><path d="M4 4 C26 -8 34 -34 22 -54 C8 -42 2 -20 4 4Z" fill="#94cc4a" stroke="#3f7a1a" stroke-width="3"/></g>';
+ var half=function(id,d,cx){return '<g id="'+id+'"><path class="coat" d="'+d+'" fill="#a8432f" stroke="#7a2c1d" stroke-width="5" stroke-linejoin="round"/><path class="face" d="'+d+'" transform="'+ins(cx,365)+'" fill="#f6e9b5" stroke="#dcc87a" stroke-width="3"/>'+(id=='hR'?emb:'')+'</g>'};
+ var bean=function(cx,cy,id){return '<path d="'+BEAN+'" transform="translate('+cx+' '+cy+') scale(.55) translate(-380 -366)" fill="#f6e9b5" stroke="#dcc87a" stroke-width="5"/>'};
+ var dish=function(cx,cy,rx){return '<ellipse cx="'+cx+'" cy="'+(cy+8)+'" rx="'+rx+'" ry="48" fill="#dfe9d2"/><ellipse cx="'+cx+'" cy="'+cy+'" rx="'+rx+'" ry="46" fill="#fff" stroke="#cfdcc0" stroke-width="5"/>'};
+ var txt=function(x,y,t){return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-size="24" font-weight="800" font-family="Cairo" fill="var(--ink)">'+t+'</text>'};
+ var seed='<g id="g_seed">'+dish(380,478,310)+'<ellipse id="water" cx="380" cy="478" rx="280" ry="38" fill="#7cc4ec" opacity="0"/>'+
+  '<g id="skin" opacity="0"><ellipse cx="96" cy="540" rx="34" ry="10" transform="rotate(-18 96 540)" fill="#a8432f"/><ellipse cx="640" cy="548" rx="30" ry="9" transform="rotate(14 640 548)" fill="#a8432f"/><ellipse cx="610" cy="520" rx="22" ry="7" fill="#8f3624"/></g>'+
+  '<g id="seedG">'+half('hL',BL,280)+half('hR',BR,480)+'</g>'+
+  '<g id="lens" opacity="0"><g transform="translate(560 330)"><circle r="64" fill="rgba(255,255,255,.2)" stroke="#6b5430" stroke-width="9"/><path d="M46 46 L112 112" stroke="#6b5430" stroke-width="16" stroke-linecap="round"/></g></g>'+
+  '<g id="tgt"></g><circle id="hot" cx="560" cy="332" r="38" fill="transparent" style="cursor:pointer;display:none"/></g>';
+ var cmp='<g id="g_cmp" opacity="0">'+dish(200,500,170)+dish(560,500,170)+bean(200,420)+
+  '<clipPath id="cA"><path d="'+BEAN+'" transform="translate(200 420) scale(.55) translate(-380 -366)"/></clipPath><circle id="spA" cx="200" cy="415" r="0" clip-path="url(#cA)"/>'+txt(200,585,'بذرة غير منبتة')+
+  '<g id="bB">'+bean(560,420)+'<clipPath id="cB"><path d="'+BEAN+'" transform="translate(560 420) scale(.55) translate(-380 -366)"/></clipPath><circle id="spB" cx="560" cy="415" r="0" clip-path="url(#cB)"/>'+txt(560,585,'بذرة منبتة')+'</g></g>';
+ var st='<g id="g_starch" opacity="0">'+dish(200,500,170)+dish(560,500,170)+
+  '<clipPath id="cC"><path d="M105 488 Q200 372 295 488Z"/></clipPath><path d="M105 488 Q200 372 295 488Z" fill="#fffdf3" stroke="#e0d9b8" stroke-width="4"/><circle cx="170" cy="470" r="3" fill="#e8e0c0"/><circle cx="210" cy="450" r="3" fill="#e8e0c0"/><circle cx="240" cy="475" r="3" fill="#e8e0c0"/><circle cx="195" cy="480" r="3" fill="#e8e0c0"/><circle id="spC" cx="200" cy="455" r="0" clip-path="url(#cC)"/>'+
+  '<clipPath id="cD"><ellipse cx="560" cy="500" rx="130" ry="36"/></clipPath><ellipse cx="560" cy="500" rx="130" ry="36" fill="#cfe9f7" stroke="#8bbfd9" stroke-width="4"/><circle id="spD" cx="560" cy="500" r="0" clip-path="url(#cD)"/>'+txt(200,585,'مادة فيها نشا')+txt(560,585,'ماء (من غير نشا)')+'</g>';
+ var germ='<g id="g_germ" opacity="0"><rect x="-100" y="490" width="960" height="500" fill="#9a6a45"/><rect x="-100" y="490" width="960" height="14" fill="#7a4f2f"/><circle cx="120" cy="600" r="5" fill="#7a4f2f"/><circle cx="560" cy="640" r="6" fill="#7a4f2f"/><circle cx="260" cy="700" r="5" fill="#7a4f2f"/>'+
+  '<path id="rt" pathLength="100" d="M374 490 C366 550 340 590 352 662" fill="none" stroke="#efe3b0" stroke-width="9" stroke-linecap="round"/><path id="rh1" d="M366 548 L334 562" stroke="#efe3b0" stroke-width="4" stroke-linecap="round"/><path id="rh2" d="M356 606 L386 622" stroke="#efe3b0" stroke-width="4" stroke-linecap="round"/>'+
+  '<path id="sh" pathLength="100" d="M392 484 C402 440 384 396 394 344" fill="none" stroke="#6fb53a" stroke-width="11" stroke-linecap="round"/>'+
+  '<g id="lf" transform="translate(394 344) scale(0)"><path d="M0 0 C-50 -6 -72 -44 -52 -66 C-20 -60 -2 -32 0 0Z" fill="#6fb53a" stroke="#3f7a1a" stroke-width="3"/><path d="M0 0 C46 -14 66 -52 44 -72 C16 -62 0 -34 0 0Z" fill="#94cc4a" stroke="#3f7a1a" stroke-width="3"/></g>'+
+  '<g id="gsd"><path id="gsp" d="'+BEAN+'" fill="#a8432f" stroke="#7a2c1d" stroke-width="8"/><path id="crk" d="M300 400 L330 416 L360 396 L392 418 L424 398" fill="none" stroke="#f6e9b5" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0"/></g>'+
+  '<g transform="translate(650 240)"><text x="20" y="-18" text-anchor="middle" font-size="18" font-weight="800" font-family="Cairo" fill="var(--ink)">كمية النشا</text><text x="20" y="3" text-anchor="middle" font-size="17" font-weight="700" font-family="Cairo" fill="var(--ink)">داخل الفلقة</text><rect y="16" width="40" height="180" rx="9" fill="#fff" stroke="var(--ink2)" stroke-width="4"/><rect id="gau" x="5" y="20" width="30" height="168" rx="5" fill="#2f4aa8"/><text x="-9" y="39" text-anchor="end" font-size="17" font-weight="700" font-family="Cairo" fill="var(--ink2)">كثير</text><text x="-9" y="194" text-anchor="end" font-size="17" font-weight="700" font-family="Cairo" fill="var(--ink2)">قليل</text></g></g>';
+ var drp='<g id="drp" style="opacity:0;transition:opacity .3s"><ellipse cx="0" cy="-4" rx="16" ry="22" fill="#d94d4d"/><path d="M-8 14 L-8 82 L0 108 L8 82 L8 14Z" fill="#e4f3fa" stroke="#7aa6b8" stroke-width="3"/><path d="M-5 56 L-5 82 L0 100 L5 82 L5 56Z" fill="'+IOD+'"/></g><circle id="dpl" r="9" fill="'+IOD+'" style="opacity:0"/>';
+ return '<defs></defs><rect x="-600" y="-600" width="2000" height="2000" fill="var(--stage)"/>'+seed+cmp+st+germ+drp;
+}
+/* ---------- render ---------- */
+function render(){
+ ['seed','cmp','germ','starch'].forEach(function(k){$('#g_'+k).style.opacity=P.sc==k?1:0});
+ var o=P.open;
+ $('#hL').setAttribute('transform','translate('+(-110*o)+' 0) rotate('+(-6*o)+' 280 420)');$('#hR').setAttribute('transform','translate('+(110*o)+' 0) rotate('+(6*o)+' 480 420)');
+ document.querySelectorAll('.coat').forEach(function(e){e.style.opacity=P.coat});
+ document.querySelectorAll('.face').forEach(function(e){e.style.opacity=Math.max(o,1-P.coat)});
+ $('#emb').style.opacity=o;$('#seedG').setAttribute('transform','translate(380 400) scale('+(1+.1*P.soak)+') translate(-380 -400)');
+ $('#water').style.opacity=.5*P.soak;$('#skin').style.opacity=1-P.coat;$('#lens').style.opacity=P.lens;
+ [['A','spA'],['B','spB'],['C','spC'],['D','spD']].forEach(function(k){var s=P[k[0]],e=$('#'+k[1]);e.setAttribute('r',s.r);e.setAttribute('fill',mix(IOD,s.f,s.t))});
+ $('#bB').style.opacity=P.showB;
+ var g=P.g,rl=cl((g-.2)/.5),sl=cl((g-.45)/.4),lf=cl((g-.7)/.3),sc=.42-.13*g;
+ $('#gsd').setAttribute('transform','translate(380 474) scale('+sc+') translate(-380 -366)');$('#crk').style.opacity=cl((g-.2)*5);
+ $('#rt').setAttribute('stroke-dasharray',(rl*100)+' 120');$('#rt').style.opacity=rl>0?1:0;$('#sh').setAttribute('stroke-dasharray',(sl*100)+' 120');$('#sh').style.opacity=sl>0?1:0;
+ $('#rh1').style.opacity=cl((g-.6)*5);$('#rh2').style.opacity=cl((g-.7)*5);$('#lf').setAttribute('transform','translate(394 344) scale('+lf+')');
+ var v=1-.85*g;$('#gau').setAttribute('y',20+168*(1-v));$('#gau').setAttribute('height',Math.max(2,168*v));
+}
+function tw(obj,to,ms,cb){var f={},t0=null,k;for(k in to)f[k]=obj[k];function s(t){if(!t0)t0=t;var u=Math.min(1,(t-t0)/ms);for(var k in to)obj[k]=f[k]+(to[k]-f[k])*u;render();if(u<1)requestAnimationFrame(s);else if(cb)cb()}requestAnimationFrame(s)}
+/* ---------- camera + bubbles ---------- */
+function setCam(c,ms,cb){var f={x:cam.x,y:cam.y,w:cam.w},t0=null;cancelAnimationFrame(raf);hideBub();
+ function s(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/ms),e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;cam={x:f.x+(c.x-f.x)*e,y:f.y+(c.y-f.y)*e,w:f.w+(c.w-f.w)*e};$('#scene').setAttribute('viewBox',cam.x+' '+cam.y+' '+cam.w+' '+cam.w);if(k<1)raf=requestAnimationFrame(s);else if(cb)cb()}raf=requestAnimationFrame(s)}
+function hideBub(){document.querySelectorAll('#ov g.bub').forEach(function(b){b.style.opacity=0})}
+function bub(t1,t2,pos,tx,ty,w,slot){
+ slot=slot||0;w=w||320;var h=t2?88:60,Q={tl:[14,14],tr:[746-w,14],bl:[14,746-h],br:[746-w,746-h]}[pos]||[14,14];
+ var sx=(tx-cam.x)/cam.w*760,sy=(ty-cam.y)/cam.w*760,top=Q[1]+h/2<sy,ax=Q[0]+w/2,ay=top?Q[1]+h:Q[1],d='';
+ [[.4,9],[.72,6]].forEach(function(q){d+='<circle cx="'+(ax+(sx-ax)*q[0])+'" cy="'+(ay+(sy-ay)*q[0])+'" r="'+q[1]+'"/>'});
+ var old=$('#bs'+slot);if(old)old.remove();
+ $('#ov').insertAdjacentHTML('beforeend','<g id="bs'+slot+'" class="bub"><rect x="'+Q[0]+'" y="'+Q[1]+'" width="'+w+'" height="'+h+'" rx="34"/>'+d+'<text class="b1" x="'+(Q[0]+w/2)+'" y="'+(Q[1]+38)+'" text-anchor="middle">'+t1+'</text>'+(t2?'<text class="b2" x="'+(Q[0]+w/2)+'" y="'+(Q[1]+68)+'" text-anchor="middle">'+t2+'</text>':'')+'</g>');
+ var b=$('#bs'+slot);b.style.opacity=0;requestAnimationFrame(function(){b.style.opacity=1})}
+/* ---------- dropper ---------- */
+function drop(cx,cy,key,fin,maxr,cb){
+ var d=$('#drp'),dl=$('#dpl'),tip=330,sp=P[key];d.setAttribute('transform','translate('+cx+' '+(tip-108)+')');d.style.opacity=1;dl.setAttribute('cx',cx);
+ setTimeout(function(){var t0=null;dl.style.opacity=1;
+  (function s(t){if(!t0)t0=t;var u=Math.min(1,(t-t0)/650);dl.setAttribute('cy',tip+(cy-tip)*u*u);if(u<1)requestAnimationFrame(s);else{dl.style.opacity=0;sp.t=0;sp.f=fin;tw(sp,{r:maxr},500,function(){tw(sp,{t:1},1200,function(){d.style.opacity=0;if(cb)cb()})})}})(0);
+  requestAnimationFrame(function s2(t){})},500)}
+
+/* ---------- helpers for demos ---------- */
+function nm(s){return s.replace(/[\u064B-\u0652\u0640]/g,'').replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي').replace(/\s+/g,' ').trim().replace(/^ال/,'')}
+function say(box,ok,t){var r=box.querySelector('.res');r.className='res '+(ok?'ok':'no');r.textContent=t}
+function mc(box,ans,okT,noT){box.querySelectorAll('.opt').forEach(function(b,i){b.onclick=function(){box.querySelectorAll('.opt').forEach(function(x){x.classList.remove('good','bad')});var ok=i==ans;b.classList.add(ok?'good':'bad');say(box,ok,ok?okT:noT)}})}
+function reveal(box){box.querySelectorAll('[data-rv]').forEach(function(b){b.onclick=function(){var r=b.nextElementSibling;r.className='res md';r.textContent='الإجابة النموذجية: '+b.dataset.rv}})}
+var HD='<div class="def"><b>التعريف:</b> ';
+/* ---------- steps ---------- */
+var STEPS=[
+{t:'لغز',h:'الجنين بياكل منين؟',p:'دي حبة فاصوليا زي اللي في البيت. جواها نبتة صغيرة جدًا مستخبية. السؤال: النبتة الصغيرة دي بتاخد أكلها منين وهي لسه جوّه البذرة؟',cam:'sC',st:{},bub:['حبة فاصوليا','جواها نبتة صغيرة','tr',380,330],
+ demo:{h:'<b>يحصل الجنين داخل بذرة الفاصوليا على غذائه من ...</b><button class="opt">الفلقتين</button><button class="opt">ضوء الشمس</button><div class="res"></div>',b:function(b){mc(b,0,'صح! الفلقتين هي مخزن الأكل. هنشوف دلوقتي إزاي.','لأ، الجنين جوّه البذرة ومفيش شمس بتوصله. كمّل وهتعرف.')}}},
+{t:'تركيب البذرة',h:'غلاف البذرة',p:'معظم النباتات بتبدأ حياتها من بذرة صغيرة. البذرة محاطة بطبقة من بره زي الجاكت، بتحميها. جرّب تنزع الغلاف.',d:HD+'تحاط البذرة بطبقة خارجية تسمى غلاف البذرة (القشرة).</div>',cam:'sC',st:{},bub:['غلاف البذرة (القشرة)','طبقة بتحمي البذرة','tl',200,380],
+ demo:{h:'<button id="pe">انزع الغلاف</button><div class="res md" id="pm">البذرة لسه عليها غلافها.</div>',b:function(){var on=0;$('#pe').onclick=function(){on=!on;tw(P,{coat:on?0:1},700);this.textContent=on?'رجّع الغلاف':'انزع الغلاف';$('#pm').textContent=on?'الغلاف اتشال. شوف القشرة جنب الطبق، والبذرة جوّاها بلون فاتح.':'البذرة لسه عليها غلافها.'}}}},
+{t:'تركيب البذرة',h:'جزأين أساسيين: الفلقتان والجنين',p:'لما نفتح البذرة نلاقيها نصفين، كل نصف اسمه فلقة. الفلقتان هما الجزء الأكبر في البذرة، وفيهم النشا، وده أكل مخزّن بيتحول لغذاء يحتاجه الجنين عشان ينبت. افتح البذرة بالسلايدر.',d:HD+'تحتوي البذرة على جزأين رئيسيين: الجنين (النبتة الصغيرة) والفلقتان.</div><div class="def"><b>الفلقتان:</b> الجزء الأكبر الذي يشكل معظم حجم البذرة. تكون غنية بالنشا الذي يتحول إلى مصدر للغذاء اللازم لعملية الإنبات. تختزن فيها العناصر الغذائية اللازمة لنمو النبتة الصغيرة.</div>',cam:'sC',st:{coat:0},bub:['الفلقتان','الجزء الأكبر ومخزن الغذاء','tl',200,380],
+ demo:{h:'<input type="range" id="op" min="0" max="100" value="0" aria-label="افتح البذرة"><div class="res md" id="om">حرّك السلايدر وافتح البذرة.</div>',b:function(){$('#op').oninput=function(){P.open=this.value/100;render();var c=P.open>.5?CAM.sO:CAM.sC;if(P.open>.5!=!!this.oo){this.oo=P.open>.5;setCam(c,600)}$('#om').textContent=P.open>.6?'البذرة اتفتحت لنصفين، كل نصف فلقة، وجوّاهم الجنين.':'حرّك السلايدر وافتح البذرة.'}}}},
+{t:'تركيب البذرة',h:'الجنين: النبتة الصغيرة',p:'بين الفلقتين في جزء صغير جدًا شكله زي نبتة صغيرة. ده الجنين. لما الظروف المناسبة تتوفر بينمو ويبقى نبات جديد. دوس عليه، وكبّره بالعدسة.',d:HD+'الجنين (النبتة الصغيرة): جزء صغير جدًا داخل البذرة ينمو عند توافر الظروف المناسبة ليكون نباتًا جديدًا.</div>',cam:'sO',st:{coat:0,open:1},hunt:1,bub:['دوس على الجنين','','tl',560,332,300],
+ demo:{h:'<button id="ln">كبّر بالعدسة</button><div class="res md" id="lm">دوس على النبتة الصغيرة اللي جوّه الفلقة.</div>',b:function(){var on=0;$('#ln').onclick=function(){on=!on;tw(P,{lens:on?1:0},500);setCam(on?CAM.emb:CAM.sO,900,function(){if(on)bub('الجنين','النبتة الصغيرة','tl',560,332,300)});this.textContent=on?'ارجع للصورة الكاملة':'كبّر بالعدسة'}}}},
+{t:'تدريب',h:'سمّي أجزاء البذرة',p:'اسحب كل اسم لمكانه على الرسمة (أو دوس على الاسم وبعدها على الدايرة).',cam:'sO',st:{coat:1,open:1},label:1,
+ demo:{h:'<div id="chips" style="text-align:center"></div><div class="res" id="lr"></div>',b:function(){labelGame()}}},
+{t:'الإنبات',h:'الإنبات: النبتة بتخرج',p:'لما الظروف تبقى مناسبة، الجنين بيكبر ويخرج من البذرة ويبدأ ينمو لحد ما يبقى نبات كبير. العملية دي اسمها الإنبات. حرّك السلايدر وشوف المراحل التلاتة، ولاحظ إن النشا في الفلقة بيقل لأن النبتة بتستهلكه.',d:HD+'الإنبات: عملية خروج النبتة الصغيرة من البذرة وبدء نموها.</div>',cam:'germ',st:{sc:'germ'},bub:['بذرة غير منبتة','','tl',380,474,300],
+ demo:{h:'<input type="range" id="gs" min="0" max="100" value="0" aria-label="الوقت"><div class="res md" id="gm"><b>بذرة غير منبتة</b> ← بداية الإنبات ← خروج النبتة</div>',b:function(){var last='';$('#gs').oninput=function(){P.g=this.value/100;render();var n=P.g<.2?'بذرة غير منبتة':P.g<.6?'بداية الإنبات':'خروج النبتة';if(n!=last){last=n;bub(n,P.g>.6?'والنشا قلّ':'','tl',380,474,300);$('#gm').innerHTML=['بذرة غير منبتة','بداية الإنبات','خروج النبتة'].map(function(x){return x==n?'<b>'+x+'</b>':x}).join(' ← ')}}}}},
+{t:'الكشف عن النشا',h:'اليود بيكشف النشا',p:'عشان نعرف إن في نشا ولا لأ بنستخدم محلول اليود، ولونه بني مصفر. لو وقع على مادة فيها نشا لونه بيبقى أزرق غامق. جرّب على مادة فيها نشا، وعلى ماء.',d:HD+'يستخدم محلول اليود البني المصفر للكشف عن وجود النشا. عند إضافة محلول اليود إلى مادة تحتوي على النشا يتحول لونه إلى اللون الأزرق الداكن.</div>',cam:'cmp',st:{sc:'starch'},bub:['محلول اليود','لونه بني مصفر','tr',560,330,300],
+ demo:{h:'<button id="d1">نقّط اليود على مادة فيها نشا</button><button id="d2">نقّط اليود على الماء</button><div class="res md" id="dm">اختار عينة وشوف اللون.</div>',b:function(){$('#d1').onclick=function(){$('#dm').textContent='اليود بيتحول لأزرق غامق: في نشا!';drop(200,452,'C',DB,70)};$('#d2').onclick=function(){$('#dm').textContent='اللون فضل بني مصفر: مفيش نشا.';drop(560,500,'D',IOD,80)}}}},
+{t:'نشاط',h:'هيا نفتح البذرة ونفحصها (١)',p:'هنعمل التجربة بنفسنا. الأدوات: بذور فاصوليا مغمورة في الماء طول الليل، بذور فاصوليا منبتة (نمت عدة أيام)، عدسة مكبرة، محلول اليود، قطارة، طبق صغير. نبدأ بالخطوات: اغمر البذور، وانزع الغلاف برفق، وافصلها نصفين، وبعدين افحصها بالعدسة.',cam:'sC',st:{},bub:['جهّز الأدوات','','tr',380,330],
+ demo:{h:'<button id="a1">١ اغمر البذور في الماء</button><button id="a2" disabled>٢ انزع الغلاف وافصل النصفين</button><button id="a3" disabled>٣ افحص بالعدسة</button><div class="res md" id="am">ابدأ بالخطوة الأولى.</div>',b:function(){
+  var m=function(t){$('#am').textContent=t};
+  $('#a1').onclick=function(){tw(P,{soak:1},900);m('البذرة اتنفخت وبقت طرية بعد الغمر.');this.disabled=true;$('#a2').disabled=false};
+  $('#a2').onclick=function(){this.disabled=true;tw(P,{coat:0},700,function(){setCam(CAM.sO,700);tw(P,{open:1},800)});m('الغلاف اتشال والبذرة اتقسمت لنصفين، كل نصف اسمه فلقة.');setTimeout(function(){$('#a3').disabled=false},1300)};
+  $('#a3').onclick=function(){this.disabled=true;tw(P,{lens:1},500);setCam(CAM.emb,900,function(){bub('الجنين','نبتة صغيرة جوّه الفلقة','tl',560,332,300)});m('شوفت جزء صغير جدًا شكله نبتة صغيرة؟ ده الجنين.')}}}},
+{t:'نشاط',h:'هيا نفتح البذرة ونفحصها (٢)',p:'الخطوة ٤: حط نص البذرة غير المنبتة في طبق صغير، وضيف قطرة واحدة من محلول اليود على السطح الداخلي للفلقة، ولاحظ تغير اللون.',cam:'cmp',st:{sc:'cmp'},bub:['نصف بذرة غير منبتة','','tl',200,420,320],
+ demo:{h:'<button id="e1">نقّط قطرة اليود</button><div class="res md" id="em">دوس عشان تضيف القطرة.</div>',b:function(){$('#e1').onclick=function(){this.disabled=true;$('#em').textContent='لاحظ: اللون اتحول لأزرق غامق.';drop(200,415,'A',DB,70)}}}},
+{t:'نشاط',h:'هيا نفتح البذرة ونفحصها (٣)',p:'الخطوة ٥: هات فلقة من بذرة فاصوليا منبتة، وضيف عليها قطرة يود، ولاحظ اللون. قارنها باللي قبلها.',cam:'cmp',st:{sc:'cmp',showB:1,A:{r:70,t:1,f:DB}},bub:['فلقة من بذرة منبتة','','tr',560,420,320],
+ demo:{h:'<button id="f1">نقّط قطرة اليود</button><div class="res md" id="fm">دوس عشان تضيف القطرة.</div>',b:function(){$('#f1').onclick=function(){this.disabled=true;$('#fm').textContent='اللون أزرق، بس أفتح من الأولى: النشا قلّ.';drop(560,415,'B',LB,70)}}}},
+{t:'الملاحظة والاستنتاج',h:'إيه اللي لاحظناه واستنتجناه؟',p:'لاحظنا إن البذرة غير المنبتة اتلونت بأزرق غامق، والمنبتة بأزرق أفتح. يعني النشا كان كتير قبل الإنبات وقلّ بعده، لأن النبتة الصغيرة استهلكت جزء منه وهي بتنمو.',d:HD+'<b>الملاحظة:</b> تتكون البذرة من نصفين متساويين يسمى كل منهما فلقة تحتوي بداخلها على الجنين (نبتة صغيرة). قبل الإنبات: يتحول لون محلول اليود إلى اللون الأزرق الداكن. بعد الإنبات: يظهر اللون الأزرق بدرجة أقل.</div><div class="def"><b>الاستنتاج:</b> تتكون البذرة من جزأين أساسيين هما: الجنين (النبتة الصغيرة) والفلقتان. تختزن البذرة بداخلها عناصر غذائية مثل النشا يستخدمها الجنين في عملية الإنبات. كمية النشا تكون أكبر في البذرة غير المنبتة، ثم تقل تدريجيًا في البذرة بعد عملية الإنبات؛ لأن النبتة الصغيرة تستهلك جزءًا منها أثناء نموها.</div>',cam:'cmp',st:{sc:'cmp',showB:1,A:{r:70,t:1,f:DB},B:{r:70,t:1,f:LB}},bub:['اللونين مختلفين','','tl',380,420,300],
+ demo:{h:'<button id="q1">قبل الإنبات</button><button id="q2">بعد الإنبات</button><div class="res md" id="qm"><span class="sw" style="background:#1d2b7a"></span>أزرق داكن = نشا كتير &nbsp; <span class="sw" style="background:#6c84cf"></span>أزرق أفتح = نشا أقل</div>',b:function(){$('#q1').onclick=function(){bub('قبل الإنبات','أزرق داكن: نشا كتير','tl',200,420,320)};$('#q2').onclick=function(){bub('بعد الإنبات','أزرق أفتح: النشا قلّ','tr',560,420,320)}}}},
+{t:'علل',h:'ليه؟',p:'فكّر في الإجابة الأول، وبعدين شوف الإجابة النموذجية.',cam:'cmp',st:{sc:'cmp',showB:1,A:{r:70,t:1,f:DB},B:{r:70,t:1,f:LB}},
+ demo:{h:'<div class="qq"><b>١) يتحول محلول اليود إلى اللون الأزرق الداكن عند وضعه على الجزء الداخلي للبذرة غير المنبتة.</b><textarea rows="2" placeholder="اكتب إجابتك"></textarea><button data-rv="لوجود النشا المخزن داخل البذرة.">شوف الإجابة</button><div class="res"></div></div><div class="qq"><b>٢) تقل كمية النشا في البذرة المنبتة.</b><textarea rows="2" placeholder="اكتب إجابتك"></textarea><button data-rv="لأن النبتة الصغيرة تستهلك جزءًا منها أثناء عملية النمو.">شوف الإجابة</button><div class="res"></div></div>',b:function(b){reveal(b)}}},
+{t:'اختبر نفسك',h:'أسئلة على الدرس',p:'جاوب على الأسئلة دي، والمقالي فيه إجابة نموذجية.',cam:'sO',st:{coat:1,open:1},custom:'quiz'}];
+var QZ=[['mc','يحصل الجنين داخل بذرة الفاصوليا على غذائه من:',['الفلقتين','ضوء الشمس'],0],['mc','غلاف البذرة هو:',['طبقة خارجية تحيط بالبذرة','النبتة الصغيرة','مخزن الغذاء'],0],['fill','النبتة الصغيرة داخل البذرة تسمى ___',['الجنين']],['mc','الجزء الأكبر في البذرة هو:',['الجنين','الفلقتان','الغلاف'],1],['fill','عملية خروج النبتة الصغيرة من البذرة وبدء نموها تسمى ___',['الإنبات']],['mc','يستخدم للكشف عن وجود النشا:',['محلول اليود','الماء','الملح'],0],['mc','لون محلول اليود عند إضافته لمادة فيها نشا:',['أصفر','أزرق داكن','أخضر'],1],['mc','في البذرة المنبتة يظهر لون اليود الأزرق:',['بدرجة أكبر','بنفس الدرجة','بدرجة أقل'],2],['open','اذكر الجزأين الأساسيين في البذرة ودور كل منهما.','الجنين: نبتة صغيرة تنمو لتصبح نباتًا جديدًا. الفلقتان: الجزء الأكبر ويختزنان الغذاء (النشا) اللازم للإنبات.'],['open','اذكر ما يحمي البذرة من الخارج.','غلاف البذرة (القشرة).']];
+function quiz(box){var h='';QZ.forEach(function(q,i){h+='<div class="qq" data-i="'+i+'"><b>'+(i+1)+') '+(q[0]=='fill'?q[1].replace('___','<input class="in">'):q[1])+'</b>';if(q[0]=='mc')q[2].forEach(function(o,k){h+='<button class="opt" data-k="'+k+'">'+o+'</button>'});else if(q[0]=='fill')h+='<br><button data-f="1">تأكد</button>';else h+='<textarea rows="2" placeholder="اكتب إجابتك"></textarea><button data-o="1">شوف الإجابة النموذجية</button>';h+='<div class="res"></div></div>'});
+ box.innerHTML=h+'<div class="res md" id="qs">إجاباتك الصح: 0</div>';var done={};function upd(i,ok){if(ok)done[i]=1;else delete done[i];$('#qs').textContent='إجاباتك الصح: '+Object.keys(done).length}
+ box.querySelectorAll('.qq').forEach(function(w){var i=+w.dataset.i,q=QZ[i],r=w.querySelector('.res');
+  w.querySelectorAll('.opt').forEach(function(b){b.onclick=function(){w.querySelectorAll('.opt').forEach(function(x){x.classList.remove('good','bad')});var ok=+b.dataset.k==q[3];b.classList.add(ok?'good':'bad');r.className='res '+(ok?'ok':'no');r.textContent=ok?'صح!':'جرّب تاني.';upd(i,ok)}});
+  var f=w.querySelector('[data-f]');if(f)f.onclick=function(){var ok=q[2].some(function(a){return nm(a)==nm(w.querySelector('input').value)});r.className='res '+(ok?'ok':'no');r.textContent=ok?'صح!':'مش مظبوط. الإجابة: '+q[2][0];upd(i,ok)};
+  var o=w.querySelector('[data-o]');if(o)o.onclick=function(){r.className='res md';r.textContent='الإجابة النموذجية: '+q[2]}})}
+/* labeling game */
+function labelGame(){
+ var T=[['غلاف البذرة',66,372],['الفلقة',172,365],['الجنين',560,332]],g=$('#tgt'),ch=$('#chips'),lr=$('#lr'),sel=null,cnt=0,done={};
+ g.innerHTML=T.map(function(t,i){return '<circle data-t="'+i+'" cx="'+t[1]+'" cy="'+t[2]+'" r="26" fill="#ffc83d" fill-opacity=".45" stroke="#ffc83d" stroke-width="4" stroke-dasharray="6 5" style="cursor:pointer"/><text x="'+t[1]+'" y="'+(t[2]+8)+'" text-anchor="middle" font-size="24" font-weight="800" font-family="Cairo" fill="#1f3d2b" style="pointer-events:none">'+(i+1)+'</text>'}).join('');
+ [1,2,0].forEach(function(n){ch.insertAdjacentHTML('beforeend','<button class="cp" data-n="'+n+'">'+T[n][0]+'</button>')});
+ function put(n,t){if(done[t])return;if(n!=t){lr.className='res no';lr.textContent='مش المكان ده. جرّب تاني.';return}done[t]=1;cnt++;var k=g.querySelector('[data-t="'+t+'"]');k.setAttribute('fill','#1a9a55');k.setAttribute('stroke','#1a9a55');k.removeAttribute('stroke-dasharray');
+  g.insertAdjacentHTML('beforeend','<text x="'+T[t][1]+'" y="'+(T[t][2]-38)+'" text-anchor="middle" font-size="26" font-weight="800" font-family="Cairo" fill="#1f3d2b" style="paint-order:stroke;stroke:#fff;stroke-width:6px">'+T[t][0]+'</text>');ch.querySelector('[data-n="'+n+'"]').style.visibility='hidden';lr.className='res ok';lr.textContent=cnt==3?'برافو! سمّيت كل الأجزاء.':'صح! كمّل.'}
+ ch.querySelectorAll('.cp').forEach(function(c){c.addEventListener('pointerdown',function(e){var n=+c.dataset.n,mv=false,cl=c.cloneNode(true);cl.style.cssText='position:fixed;pointer-events:none;z-index:99;margin:0;left:'+(e.clientX-40)+'px;top:'+(e.clientY-20)+'px';document.body.appendChild(cl);
+  function m(ev){mv=true;cl.style.left=(ev.clientX-40)+'px';cl.style.top=(ev.clientY-20)+'px'}
+  function up(ev){document.removeEventListener('pointermove',m);document.removeEventListener('pointerup',up);cl.remove();if(mv){var t=document.elementFromPoint(ev.clientX,ev.clientY);t=t&&t.closest&&t.closest('[data-t]');if(t)put(n,+t.dataset.t)}else{sel=sel===n?null:n;ch.querySelectorAll('.cp').forEach(function(x){x.classList.toggle('on',+x.dataset.n===sel)})}}
+  document.addEventListener('pointermove',m);document.addEventListener('pointerup',up)})});
+ g.onclick=function(e){var t=e.target.closest('[data-t]');if(t&&sel!==null){put(sel,+t.dataset.t);sel=null;ch.querySelectorAll('.cp').forEach(function(x){x.classList.remove('on')})}}}
+/* ---------- scroll engine ---------- */
+function stepsHTML(){return STEPS.map(function(s,i){return '<section class="step" id="st'+i+'" data-i="'+i+'"><span class="node"></span><div class="panel"><span class="tg">'+s.t+'</span><h2>'+s.h+'</h2><p>'+s.p+'</p>'+(s.d||'')+'<div class="demo" id="demo'+i+'"></div><div class="sn">'+(i?'<button class="g" data-go="'+(i-1)+'">السابق</button>':'<span></span>')+(i<STEPS.length-1?'<button data-go="'+(i+1)+'">التالي</button>':'')+'</div></div></section>'}).join('')}
+function activate(i){
+ if(i<0||i>=STEPS.length||i==cur)return;var S=STEPS[i],prev=cur;CUR=S;P=Object.assign(T0(),S.st);render();
+ $('#hot').style.display=S.hunt?'block':'none';$('#tgt').innerHTML='';
+ STEPS.forEach(function(s2,k){if(k!=i&&!s2.custom)$('#demo'+k).innerHTML=''});
+ var box=$('#demo'+i);if(S.custom=='quiz'){if(!ready[i]){quiz(box);ready[i]=1}}else if(S.demo){box.innerHTML=S.demo.h;if(S.demo.b)S.demo.b(box)}
+ $('#ov').innerHTML='';var b=S.bub;setCam(CAM[S.cam],Math.abs(i-prev)==1?1000:700,function(){if(b)bub(b[0],b[1],b[2],b[3],b[4],b[5])});
+ cur=i;document.querySelectorAll('.step').forEach(function(e,k){e.classList.toggle('on',k==i);e.classList.toggle('dn',k<i)})}
+var tick=0;
+function stepTarget(){var m=innerWidth<=780,t=m?$('.stagebox').getBoundingClientRect().bottom:0;return t+(innerHeight-t)/2}
+function scrollToStep(i){var e=$('#st'+i);if(!e)return;var r=e.getBoundingClientRect();scrollBy({top:r.top+r.height/2-stepTarget(),behavior:'smooth'})}
+function onScroll(){if(tick)return;tick=requestAnimationFrame(function(){tick=0;var t=stepTarget(),best=0,bd=1e9;document.querySelectorAll('.step').forEach(function(e,k){var r=e.getBoundingClientRect(),d=Math.abs(r.top+r.height/2-t);if(d<bd){bd=d;best=k}});activate(best);var h=document.documentElement;$('#prog i').style.width=Math.min(100,scrollY/Math.max(1,h.scrollHeight-innerHeight)*100)+'%'})}
+$('#scene').innerHTML=SCN();$('#steps').innerHTML=stepsHTML();
+$('#steps').addEventListener('click',function(e){var g=e.target.closest('[data-go]');if(g)scrollToStep(+g.dataset.go)});
+$('#scene').addEventListener('click',function(e){if(CUR&&CUR.hunt&&e.target.id=='hot'){var m=$('#lm');if(m)m.textContent='برافو! ده الجنين، النبتة الصغيرة جوّه الفلقة.';bub('الجنين','النبتة الصغيرة','tl',560,332,300)}});
+addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);
+document.addEventListener('keydown',function(e){if(/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;if(e.key=='ArrowLeft')scrollToStep(cur+1);if(e.key=='ArrowRight')scrollToStep(cur-1)});
+activate(0);onScroll();
+</script></body></html>
